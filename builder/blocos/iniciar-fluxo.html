@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Header do Builder -->
+    <header class="builder-header">
+        <div class="builder-header-container">
+            <div class="builder-logo">
+                <a href="../index.html">
+                    <i class="fas fa-cubes"></i>
+                    <span>Builder</span>
+                </a>
+            </div>
+            
+            <div class="builder-header-actions">
+                <a href="../editar-fluxo.html" class="btn-back-flow">
+                    <i class="fas fa-arrow-left"></i> Voltar ao Fluxo
+                </a>
+                <button class="btn-save-block"><i class="fas fa-save"></i> Salvar Bloco</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <section class="block-editor-main">
+        <div class="block-editor-container">
+            
+            <!-- Cabeçalho -->
+            <div class="block-editor-header">
+                <div class="block-icon action">
+                    <i class="fas fa-play-circle"></i>
+                </div>
+                <h1>Configurar Início de Fluxo</h1>
+                <p></p>
+            </div>
+            
+            <!-- Seleção do Fluxo -->
+            <div class="form-section">
+                <h2>Seleção do Fluxo</h2>
+                
+                <div class="form-group">
+                    <label>Fluxo a Iniciar *</label>
+                    <select>
+                        <option value="">Selecione o fluxo...</option>
+                        <option value="fluxo1">Fluxo 1</option>
+                        <option value="fluxo2">Fluxo 2</option>
+                        <option value="fluxo3">Fluxo 3</option>
+                    </select>
+                </div>
+            </div>
+            
+            <!-- Modo de Início -->
+            <div class="form-section">
+                <h2>Modo de Início</h2>
+                
+                <div class="form-group">
+                    <label>Modo</label>
+                    <select>
+                        <option value="imediato">Imediato</option>
+                        <option value="apos-atraso" selected>Após Atraso</option>
+                    </select>
+                </div>
+                
+                <div class="form-row" id="config-atraso">
+                    <div class="form-group">
+                        <label>Tempo de Atraso</label>
+                        <input type="number" min="0" value="0">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Unidade</label>
+                        <select>
+                            <option value="segundos">Segundos</option>
+                            <option value="minutos" selected>Minutos</option>
+                            <option value="horas">Horas</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Parâmetros -->
+            <div class="form-section">
+                <h2>Parâmetros</h2>
+                
+                <div class="params-list">
+                    <div class="param-item">
+                        <input type="text" placeholder="Chave" value="nome">
+                        <input type="text" placeholder="Valor" value="{{nome}}">
+                        <button class="btn-remove-param"><i class="fas fa-times"></i></button>
+                    </div>
+                </div>
+                
+                <button class="btn-add-param">
+                    <i class="fas fa-plus"></i> Adicionar Parâmetro
+                </button>
+            </div>
+            
+            <!-- Comportamento -->
+            <div class="form-section">
+                <h2>Comportamento</h2>
+                
+                <div class="form-group">
+                    <label class="checkbox-container">
+                        <input type="checkbox" checked>
+                        <span class="checkmark"></span>
+                        Aguardar conclusão do fluxo
+                    </label>
+                </div>
+                
+                <div class="form-group">
+                    <label class="checkbox-container">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        Continuar fluxo atual após conclusão
+                    </label>
+                </div>
+            </div>
+            
+            <!-- Resumo -->
+            <div class="form-section">
+                <h2>Resumo</h2>
+                
+                <div class="flow-summary">
+                    <div class="summary-item">
+                        <span>Fluxo:</span>
+                        <strong></strong>
+                    </div>
+                    <div class="summary-item">
+                        <span>Modo:</span>
+                        <strong>Após Atraso</strong>
+                    </div>
+                    <div class="summary-item">
+                        <span>Atraso:</span>
+                        <strong> minutos</strong>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Botões -->
+            <div class="form-actions">
+                <button type="submit" class="btn-primary">
+                    <i class="fas fa-save"></i> Salvar Início de Fluxo
+                </button>
+                
+                <a href="../editar-fluxo.html" class="btn-cancel">
+                    <i class="fas fa-times"></i> Cancelar
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script src="../../assets/js/script.js"></script>
+</body>
+</html>
