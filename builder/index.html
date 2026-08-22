@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title></title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Header do Builder -->
+    <header class="builder-header">
+        <div class="builder-header-container">
+            <div class="builder-logo">
+                <a href="index.html">
+                    <i class="fas fa-cubes"></i>
+                    <span>Builder</span>
+                </a>
+            </div>
+            
+            <div class="builder-header-actions">
+                <button class="btn-undo"><i class="fas fa-undo"></i></button>
+                <button class="btn-redo"><i class="fas fa-redo"></i></button>
+                <span class="builder-divider"></span>
+                <button class="btn-preview"><i class="fas fa-eye"></i> Pré-visualizar</button>
+                <button class="btn-publish"><i class="fas fa-rocket"></i> Publicar</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <section class="builder-main">
+        <div class="builder-container">
+            
+            <!-- Sidebar de Componentes -->
+            <aside class="builder-sidebar">
+                <div class="builder-sidebar-tabs">
+                    <button class="builder-tab active">
+                        <i class="fas fa-th-large"></i> Componentes
+                    </button>
+                    <button class="builder-tab">
+                        <i class="fas fa-cog"></i> Configurações
+                    </button>
+                    <button class="builder-tab">
+                        <i class="fas fa-layer-group"></i> Camadas
+                    </button>
+                </div>
+                
+                <div class="builder-components">
+                    <div class="component-category">
+                        <h3>Básicos</h3>
+                        
+                        <div class="component-item" draggable="true">
+                            <i class="fas fa-heading"></i>
+                            <span>Título</span>
+                        </div>
+                        
+                        <div class="component-item" draggable="true">
+                            <i class="fas fa-paragraph"></i>
+                            <span>Texto</span>
+                        </div>
+                        
+                        <div class="component-item" draggable="true">
+                            <i class="fas fa-image"></i>
+                            <span>Imagem</span>
+                        </div>
+                        
+                        <div class="component-item" draggable="true">
+                            <i class="fas fa-video"></i>
+                            <span>Vídeo</span>
+                        </div>
+                        
+                        <div class="component-item" draggable="true">
+                            <i class="fas fa-mouse-pointer"></i>
+                            <span>Botão</span>
+                        </div>
+                    </div>
+                    
+                    <div class="component-category">
+                        <h3>Layout</h3>
+                        
+                        <div class="component-item" draggable="true">
+                            <i class="fas fa-columns"></i>
+                            <span>Colunas</span>
+                        </div>
+                        
+                        <div class="component-item" draggable="true">
+                            <i class="fas fa-grip-horizontal"></i>
+                            <span>Divisor</span>
+                        </div>
+                        
+                        <div class="component-item" draggable="true">
+                            <i class="fas fa-expand"></i>
+                            <span>Espaçador</span>
+                        </div>
+                    </div>
+                    
+                    <div class="component-category">
+                        <h3>Formulário</h3>
+                        
+                        <div class="component-item" draggable="true">
+                            <i class="fas fa-envelope"></i>
+                            <span>Campo de E-mail</span>
+                        </div>
+                        
+                        <div class="component-item" draggable="true">
+                            <i class="fas fa-phone"></i>
+                            <span>Campo de Telefone</span>
+                        </div>
+                        
+                        <div class="component-item" draggable="true">
+                            <i class="fas fa-check-square"></i>
+                            <span>Checkbox</span>
+                        </div>
+                    </div>
+                    
+                    <div class="component-category">
+                        <h3>Social</h3>
+                        
+                        <div class="component-item" draggable="true">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>Botão WhatsApp</span>
+                        </div>
+                        
+                        <div class="component-item" draggable="true">
+                            <i class="fab fa-instagram"></i>
+                            <span>Botão Instagram</span>
+                        </div>
+                        
+                        <div class="component-item" draggable="true">
+                            <i class="fas fa-share-alt"></i>
+                            <span>Redes Sociais</span>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+            
+            <!-- Área de Construção -->
+            <main class="builder-canvas">
+                <div class="builder-canvas-header">
+                    <span>Página: </span>
+                    <select class="page-selector">
+                        <option value="home">Home</option>
+                        <option value="sobre">Sobre</option>
+                        <option value="contato">Contato</option>
+                    </select>
+                </div>
+                
+                <div class="builder-canvas-area">
+                    <!-- Área onde os componentes são arrastados -->
+                    <div class="canvas-placeholder">
+                        <i class="fas fa-arrow-left"></i>
+                        <p>Arraste componentes da esquerda para cá</p>
+                    </div>
+                    
+                    <!-- Exemplo de Componente na Canvas -->
+                    <div class="canvas-component" data-component="titulo">
+                        <div class="component-toolbar">
+                            <button class="btn-move"><i class="fas fa-arrows-alt"></i></button>
+                            <button class="btn-edit-component"><i class="fas fa-edit"></i></button>
+                            <button class="btn-duplicate-component"><i class="fas fa-copy"></i></button>
+                            <button class="btn-delete-component"><i class="fas fa-trash"></i></button>
+                        </div>
+                        <div class="component-content">
+                            <h1></h1>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            
+            <!-- Painel de Configurações -->
+            <aside class="builder-properties">
+                <div class="properties-header">
+                    <h3>Propriedades</h3>
+                </div>
+                
+                <div class="properties-content">
+                    <div class="property-group">
+                        <label>Texto</label>
+                        <input type="text" placeholder="">
+                    </div>
+                    
+                    <div class="property-group">
+                        <label>Cor</label>
+                        <input type="color">
+                    </div>
+                    
+                    <div class="property-group">
+                        <label>Tamanho da Fonte</label>
+                        <select>
+                            <option>Pequeno</option>
+                            <option selected>Médio</option>
+                            <option>Grande</option>
+                            <option>Extra Grande</option>
+                        </select>
+                    </div>
+                    
+                    <div class="property-group">
+                        <label>Alinhamento</label>
+                        <div class="alignment-buttons">
+                            <button><i class="fas fa-align-left"></i></button>
+                            <button><i class="fas fa-align-center"></i></button>
+                            <button><i class="fas fa-align-right"></i></button>
+                        </div>
+                    </div>
+                    
+                    <div class="property-group">
+                        <label>Margem</label>
+                        <input type="number" placeholder="px">
+                    </div>
+                    
+                    <div class="property-group">
+                        <label>Padding</label>
+                        <input type="number" placeholder="px">
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <!-- Rodapé do Builder -->
+    <footer class="builder-footer">
+        <div class="builder-footer-container">
+            <span>Última alteração: </span>
+            <div class="builder-footer-actions">
+                <button class="btn-save-draft"><i class="fas fa-save"></i> Salvar Rascunho</button>
+                <button class="btn-publish-footer"><i class="fas fa-rocket"></i> Publicar</button>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>
