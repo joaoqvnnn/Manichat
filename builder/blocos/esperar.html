@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Header do Builder -->
+    <header class="builder-header">
+        <div class="builder-header-container">
+            <div class="builder-logo">
+                <a href="../index.html">
+                    <i class="fas fa-cubes"></i>
+                    <span>Builder</span>
+                </a>
+            </div>
+            
+            <div class="builder-header-actions">
+                <a href="../editar-fluxo.html" class="btn-back-flow">
+                    <i class="fas fa-arrow-left"></i> Voltar ao Fluxo
+                </a>
+                <button class="btn-save-block"><i class="fas fa-save"></i> Salvar Bloco</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <section class="block-editor-main">
+        <div class="block-editor-container">
+            
+            <!-- Cabeçalho -->
+            <div class="block-editor-header">
+                <div class="block-icon condition">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <h1>Configurar Espera</h1>
+                <p></p>
+            </div>
+            
+            <!-- Tipo de Espera -->
+            <div class="form-section">
+                <h2>Tipo de Espera</h2>
+                
+                <div class="wait-type-options">
+                    <label class="wait-type-card">
+                        <input type="radio" name="tipo-espera" value="tempo" checked>
+                        <i class="fas fa-clock"></i>
+                        <h3>Tempo Fixo</h3>
+                        <p></p>
+                    </label>
+                    
+                    <label class="wait-type-card">
+                        <input type="radio" name="tipo-espera" value="resposta">
+                        <i class="fas fa-comment"></i>
+                        <h3>Até Resposta</h3>
+                        <p></p>
+                    </label>
+                    
+                    <label class="wait-type-card">
+                        <input type="radio" name="tipo-espera" value="data">
+                        <i class="fas fa-calendar"></i>
+                        <h3>Até Data Específica</h3>
+                        <p></p>
+                    </label>
+                </div>
+            </div>
+            
+            <!-- Tempo Fixo -->
+            <div class="form-section" id="config-tempo">
+                <h2>Configuração de Tempo</h2>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Tempo de Espera</label>
+                        <input type="number" min="0" value="0">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Unidade</label>
+                        <select>
+                            <option value="segundos">Segundos</option>
+                            <option value="minutos" selected>Minutos</option>
+                            <option value="horas">Horas</option>
+                            <option value="dias">Dias</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Até Data Específica -->
+            <div class="form-section" id="config-data" style="display: none;">
+                <h2>Configuração de Data</h2>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Data</label>
+                        <input type="date">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Hora</label>
+                        <input type="time">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Timeout -->
+            <div class="form-section">
+                <h2>Timeout</h2>
+                
+                <div class="form-group">
+                    <label>Se não houver resposta em</label>
+                    <div class="input-with-suffix">
+                        <input type="number" min="0" value="24">
+                        <span>horas</span>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Ação após timeout</label>
+                    <select>
+                        <option value="continuar">Continuar fluxo</option>
+                        <option value="encerrar">Encerrar fluxo</option>
+                        <option value="notificar">Notificar administrador</option>
+                    </select>
+                </div>
+            </div>
+            
+            <!-- Preview -->
+            <div class="form-section">
+                <h2>Resumo</h2>
+                
+                <div class="wait-summary">
+                    <div class="summary-item">
+                        <span>Tipo:</span>
+                        <strong>Tempo Fixo</strong>
+                    </div>
+                    <div class="summary-item">
+                        <span>Duração:</span>
+                        <strong> minutos</strong>
+                    </div>
+                    <div class="summary-item">
+                        <span>Timeout:</span>
+                        <strong>24 horas</strong>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Botões -->
+            <div class="form-actions">
+                <button type="submit" class="btn-primary">
+                    <i class="fas fa-save"></i> Salvar Espera
+                </button>
+                
+                <a href="../editar-fluxo.html" class="btn-cancel">
+                    <i class="fas fa-times"></i> Cancelar
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script src="../../assets/js/script.js"></script>
+</body>
+</html>
