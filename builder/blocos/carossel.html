@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Header do Builder -->
+    <header class="builder-header">
+        <div class="builder-header-container">
+            <div class="builder-logo">
+                <a href="../index.html">
+                    <i class="fas fa-cubes"></i>
+                    <span>Builder</span>
+                </a>
+            </div>
+            
+            <div class="builder-header-actions">
+                <a href="../editar-fluxo.html" class="btn-back-flow">
+                    <i class="fas fa-arrow-left"></i> Voltar ao Fluxo
+                </a>
+                <button class="btn-save-block"><i class="fas fa-save"></i> Salvar Bloco</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <section class="block-editor-main">
+        <div class="block-editor-container">
+            
+            <!-- Cabeçalho -->
+            <div class="block-editor-header">
+                <div class="block-icon action">
+                    <i class="fas fa-images"></i>
+                </div>
+                <h1>Configurar Carrossel</h1>
+                <p></p>
+            </div>
+            
+            <!-- Cards do Carrossel -->
+            <div class="form-section">
+                <h2>Cards</h2>
+                
+                <div class="carousel-cards-list">
+                    
+                    <!-- Card 1 -->
+                    <div class="carousel-card-config">
+                        <div class="card-config-header">
+                            <h3>Card 1</h3>
+                            <button class="btn-remove-card"><i class="fas fa-times"></i></button>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Imagem</label>
+                            <div class="card-image-upload">
+                                <i class="fas fa-image"></i>
+                                <button>Enviar Imagem</button>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Título</label>
+                            <input type="text" placeholder="">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Descrição</label>
+                            <textarea rows="3" placeholder=""></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Botão</label>
+                            <input type="text" placeholder="">
+                        </div>
+                    </div>
+                    
+                    <!-- Card 2 -->
+                    <div class="carousel-card-config">
+                        <div class="card-config-header">
+                            <h3>Card 2</h3>
+                            <button class="btn-remove-card"><i class="fas fa-times"></i></button>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Imagem</label>
+                            <div class="card-image-upload">
+                                <i class="fas fa-image"></i>
+                                <button>Enviar Imagem</button>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Título</label>
+                            <input type="text" placeholder="">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Descrição</label>
+                            <textarea rows="3" placeholder=""></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Botão</label>
+                            <input type="text" placeholder="">
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="btn-add-card">
+                    <i class="fas fa-plus"></i> Adicionar Card
+                </button>
+            </div>
+            
+            <!-- Preview -->
+            <div class="form-section">
+                <h2>Pré-visualização</h2>
+                
+                <div class="carousel-preview">
+                    <div class="preview-card">
+                        <div class="preview-card-image">Imagem</div>
+                        <h4>Título</h4>
+                        <p>Descrição</p>
+                        <button>Botão</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Botões -->
+            <div class="form-actions">
+                <button type="submit" class="btn-primary">
+                    <i class="fas fa-save"></i> Salvar Carrossel
+                </button>
+                
+                <a href="../editar-fluxo.html" class="btn-cancel">
+                    <i class="fas fa-times"></i> Cancelar
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script src="../../assets/js/script.js"></script>
+</body>
+</html>
