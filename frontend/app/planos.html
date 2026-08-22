@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Header do App -->
+    <header class="app-header">
+        <div class="app-header-container">
+            <div class="app-logo">
+                <a href="dashboard.html"></a>
+            </div>
+            
+            <div class="app-header-actions">
+                <button class="app-notification-btn">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-count">3</span>
+                </button>
+                
+                <div class="app-user-menu">
+                    <button class="app-user-avatar">
+                        <img src="../../assets/images/usuarios/avatar.jpg" alt="">
+                        <span></span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="app-user-dropdown">
+                        <a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+                        <a href="../autenticacao/login.html"><i class="fas fa-sign-out-alt"></i> Sair</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <section class="app-main">
+        <div class="app-container">
+            
+            <!-- Sidebar -->
+            <aside class="app-sidebar">
+                <nav class="app-nav">
+                    <div class="app-nav-section">
+                        <h3>Principal</h3>
+                        <a href="dashboard.html">
+                            <i class="fas fa-dashboard"></i> Dashboard
+                        </a>
+                    </div>
+                    
+                    <div class="app-nav-section">
+                        <h3>Ferramentas</h3>
+                        <a href="faturamento.html">
+                            <i class="fas fa-credit-card"></i> Faturamento
+                        </a>
+                        <a href="planos.html" class="active">
+                            <i class="fas fa-box"></i> Planos
+                        </a>
+                    </div>
+                </nav>
+            </aside>
+            
+            <!-- Conteúdo Principal -->
+            <main class="app-content">
+                
+                <!-- Cabeçalho -->
+                <div class="app-content-header">
+                    <div>
+                        <h1>Planos Disponíveis</h1>
+                        <p></p>
+                    </div>
+                </div>
+                
+                <!-- Cards de Planos -->
+                <div class="plans-grid">
+                    
+                    <!-- Plano Básico -->
+                    <div class="plan-card">
+                        <h3>Básico</h3>
+                        <span class="plan-price">R$ /mês</span>
+                        <ul>
+                            <li><i class="fas fa-check"></i> </li>
+                            <li><i class="fas fa-check"></i> </li>
+                            <li><i class="fas fa-check"></i> </li>
+                        </ul>
+                        <button class="btn-select-plan">Selecionar</button>
+                    </div>
+                    
+                    <!-- Plano Profissional -->
+                    <div class="plan-card current">
+                        <span class="current-badge">Plano Atual</span>
+                        <h3>Profissional</h3>
+                        <span class="plan-price">R$ /mês</span>
+                        <ul>
+                            <li><i class="fas fa-check"></i> </li>
+                            <li><i class="fas fa-check"></i> </li>
+                            <li><i class="fas fa-check"></i> </li>
+                            <li><i class="fas fa-check"></i> </li>
+                        </ul>
+                        <button class="btn-select-plan" disabled>Atual</button>
+                    </div>
+                    
+                    <!-- Plano Enterprise -->
+                    <div class="plan-card">
+                        <h3>Enterprise</h3>
+                        <span class="plan-price">R$ /mês</span>
+                        <ul>
+                            <li><i class="fas fa-check"></i> </li>
+                            <li><i class="fas fa-check"></i> </li>
+                            <li><i class="fas fa-check"></i> </li>
+                            <li><i class="fas fa-check"></i> </li>
+                            <li><i class="fas fa-check"></i> </li>
+                        </ul>
+                        <button class="btn-select-plan">Selecionar</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </section>
+
+    <script src="../../assets/js/script.js"></script>
+</body>
+</html>
