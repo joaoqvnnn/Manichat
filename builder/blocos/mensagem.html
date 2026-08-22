@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Header do Builder -->
+    <header class="builder-header">
+        <div class="builder-header-container">
+            <div class="builder-logo">
+                <a href="../index.html">
+                    <i class="fas fa-cubes"></i>
+                    <span>Builder</span>
+                </a>
+            </div>
+            
+            <div class="builder-header-actions">
+                <a href="../editar-fluxo.html" class="btn-back-flow">
+                    <i class="fas fa-arrow-left"></i> Voltar ao Fluxo
+                </a>
+                <button class="btn-save-block"><i class="fas fa-save"></i> Salvar Bloco</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <section class="block-editor-main">
+        <div class="block-editor-container">
+            
+            <!-- Cabeçalho -->
+            <div class="block-editor-header">
+                <div class="block-icon action">
+                    <i class="fas fa-paper-plane"></i>
+                </div>
+                <h1>Configurar Mensagem</h1>
+                <p></p>
+            </div>
+            
+            <!-- Conteúdo da Mensagem -->
+            <div class="form-section">
+                <h2>Conteúdo da Mensagem</h2>
+                
+                <div class="form-group">
+                    <label>Texto da Mensagem *</label>
+                    <textarea rows="5" placeholder=""></textarea>
+                </div>
+                
+                <!-- Variáveis -->
+                <div class="variables-section">
+                    <label>Inserir Variável</label>
+                    <div class="variables-list">
+                        <button class="variable-btn">{{nome}}</button>
+                        <button class="variable-btn">{{email}}</button>
+                        <button class="variable-btn">{{telefone}}</button>
+                        <button class="variable-btn">{{data}}</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tipo de Mensagem -->
+            <div class="form-section">
+                <h2>Tipo de Mensagem</h2>
+                
+                <div class="message-type-options">
+                    <label class="message-type-card">
+                        <input type="radio" name="tipo-mensagem" value="texto" checked>
+                        <i class="fas fa-font"></i>
+                        <h3>Texto</h3>
+                    </label>
+                    
+                    <label class="message-type-card">
+                        <input type="radio" name="tipo-mensagem" value="imagem">
+                        <i class="fas fa-image"></i>
+                        <h3>Imagem</h3>
+                    </label>
+                    
+                    <label class="message-type-card">
+                        <input type="radio" name="tipo-mensagem" value="video">
+                        <i class="fas fa-video"></i>
+                        <h3>Vídeo</h3>
+                    </label>
+                    
+                    <label class="message-type-card">
+                        <input type="radio" name="tipo-mensagem" value="documento">
+                        <i class="fas fa-file"></i>
+                        <h3>Documento</h3>
+                    </label>
+                </div>
+            </div>
+            
+            <!-- Atraso -->
+            <div class="form-section">
+                <h2>Atraso</h2>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Tempo de Atraso</label>
+                        <input type="number" min="0" value="0">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Unidade</label>
+                        <select>
+                            <option value="segundos">Segundos</option>
+                            <option value="minutos">Minutos</option>
+                            <option value="horas">Horas</option>
+                            <option value="dias">Dias</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Preview -->
+            <div class="form-section">
+                <h2>Pré-visualização</h2>
+                
+                <div class="message-preview">
+                    <div class="msg bot">
+                        <div class="msg-bubble">
+                            <p></p>
+                            <span class="msg-time"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Botões -->
+            <div class="form-actions">
+                <button type="submit" class="btn-primary">
+                    <i class="fas fa-save"></i> Salvar Mensagem
+                </button>
+                
+                <a href="../editar-fluxo.html" class="btn-cancel">
+                    <i class="fas fa-times"></i> Cancelar
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script src="../../assets/js/script.js"></script>
+</body>
+</html>
