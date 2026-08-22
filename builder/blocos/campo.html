@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Header do Builder -->
+    <header class="builder-header">
+        <div class="builder-header-container">
+            <div class="builder-logo">
+                <a href="../index.html">
+                    <i class="fas fa-cubes"></i>
+                    <span>Builder</span>
+                </a>
+            </div>
+            
+            <div class="builder-header-actions">
+                <a href="../editar-fluxo.html" class="btn-back-flow">
+                    <i class="fas fa-arrow-left"></i> Voltar ao Fluxo
+                </a>
+                <button class="btn-save-block"><i class="fas fa-save"></i> Salvar Bloco</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <section class="block-editor-main">
+        <div class="block-editor-container">
+            
+            <!-- Cabeçalho -->
+            <div class="block-editor-header">
+                <div class="block-icon action">
+                    <i class="fas fa-database"></i>
+                </div>
+                <h1>Configurar Campo</h1>
+                <p></p>
+            </div>
+            
+            <!-- Ação do Campo -->
+            <div class="form-section">
+                <h2>Ação</h2>
+                
+                <div class="field-action-options">
+                    <label class="field-action-card">
+                        <input type="radio" name="acao-campo" value="atualizar" checked>
+                        <i class="fas fa-edit"></i>
+                        <h3>Atualizar Campo</h3>
+                    </label>
+                    
+                    <label class="field-action-card">
+                        <input type="radio" name="acao-campo" value="limpar">
+                        <i class="fas fa-eraser"></i>
+                        <h3>Limpar Campo</h3>
+                    </label>
+                </div>
+            </div>
+            
+            <!-- Seleção do Campo -->
+            <div class="form-section">
+                <h2>Seleção do Campo</h2>
+                
+                <div class="form-group">
+                    <label>Campo *</label>
+                    <select>
+                        <option value="">Selecione o campo...</option>
+                        <option value="nome">Nome</option>
+                        <option value="email">E-mail</option>
+                        <option value="telefone">Telefone</option>
+                        <option value="campo1">Campo Personalizado 1</option>
+                        <option value="campo2">Campo Personalizado 2</option>
+                    </select>
+                </div>
+            </div>
+            
+            <!-- Valor do Campo -->
+            <div class="form-section" id="valor-campo">
+                <h2>Valor</h2>
+                
+                <div class="form-group">
+                    <label>Tipo de Valor</label>
+                    <select>
+                        <option value="texto">Texto</option>
+                        <option value="variavel">Variável</option>
+                        <option value="resposta">Resposta do Usuário</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Valor</label>
+                    <input type="text" placeholder="">
+                </div>
+            </div>
+            
+            <!-- Variáveis Disponíveis -->
+            <div class="form-section">
+                <h2>Variáveis Disponíveis</h2>
+                
+                <div class="variables-list">
+                    <button class="variable-btn">{{nome}}</button>
+                    <button class="variable-btn">{{email}}</button>
+                    <button class="variable-btn">{{telefone}}</button>
+                    <button class="variable-btn">{{resposta}}</button>
+                    <button class="variable-btn">{{data}}</button>
+                </div>
+            </div>
+            
+            <!-- Preview -->
+            <div class="form-section">
+                <h2>Resumo</h2>
+                
+                <div class="field-summary">
+                    <p>Campo: <strong></strong></p>
+                    <p>Ação: <strong>Atualizar</strong></p>
+                    <p>Valor: <strong></strong></p>
+                </div>
+            </div>
+            
+            <!-- Botões -->
+            <div class="form-actions">
+                <button type="submit" class="btn-primary">
+                    <i class="fas fa-save"></i> Salvar Campo
+                </button>
+                
+                <a href="../editar-fluxo.html" class="btn-cancel">
+                    <i class="fas fa-times"></i> Cancelar
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script src="../../assets/js/script.js"></script>
+</body>
+</html>
