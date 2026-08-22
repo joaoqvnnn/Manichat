@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="auth-body">
+    <!-- Header Simplificado -->
+    <header class="auth-header">
+        <div class="auth-header-container">
+            <div class="logo">
+                <a href="../home/index.html"></a>
+            </div>
+            <a href="../home/index.html" class="btn-back-home">
+                <i class="fas fa-arrow-left"></i> Voltar ao Site
+            </a>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <section class="auth-main">
+        <div class="verification-container">
+            <div class="verification-box">
+                
+                <!-- Ícone -->
+                <div class="verification-icon phone-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                
+                <!-- Título -->
+                <h1>Verifique seu Telefone</h1>
+                <p class="verification-description"></p>
+                
+                <!-- Número de Telefone -->
+                <div class="verification-phone-sent">
+                    <p>Enviamos um código SMS para:</p>
+                    <div class="phone-address">
+                        <i class="fas fa-phone"></i>
+                        <span></span>
+                    </div>
+                </div>
+                
+                <!-- Campo de Código -->
+                <div class="code-verification">
+                    <label for="codigo-sms">Digite o código de verificação</label>
+                    
+                    <div class="code-inputs">
+                        <input type="text" maxlength="1" class="code-input" inputmode="numeric" pattern="[0-9]">
+                        <input type="text" maxlength="1" class="code-input" inputmode="numeric" pattern="[0-9]">
+                        <input type="text" maxlength="1" class="code-input" inputmode="numeric" pattern="[0-9]">
+                        <input type="text" maxlength="1" class="code-input" inputmode="numeric" pattern="[0-9]">
+                        <input type="text" maxlength="1" class="code-input" inputmode="numeric" pattern="[0-9]">
+                        <input type="text" maxlength="1" class="code-input" inputmode="numeric" pattern="[0-9]">
+                    </div>
+                    
+                    <p class="code-hint"></p>
+                </div>
+                
+                <!-- Botão de Verificação -->
+                <button class="btn-verify-code" id="btn-verify-phone">
+                    <i class="fas fa-check-circle"></i> Verificar Código
+                </button>
+                
+                <!-- Opções de Reenvio -->
+                <div class="resend-options">
+                    <div class="resend-timer" id="resend-phone-timer">
+                        <i class="fas fa-clock"></i>
+                        <span>Reenviar em <strong id="phone-timer-countdown">30</strong> segundos</span>
+                    </div>
+                    
+                    <div class="resend-methods">
+                        <button class="btn-resend-sms" id="btn-resend-sms">
+                            <i class="fas fa-sms"></i> Reenviar SMS
+                        </button>
+                        
+                        <button class="btn-resend-call" id="btn-resend-call">
+                            <i class="fas fa-phone-alt"></i> Receber por Ligação
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Alterar Telefone -->
+                <div class="change-phone">
+                    <p>Digitou o número errado? <a href="cadastro.html">Alterar telefone</a></p>
+                </div>
+                
+                <!-- Aviso de Segurança -->
+                <div class="security-notice">
+                    <i class="fas fa-shield-alt"></i>
+                    <p></p>
+                </div>
+                
+                <!-- Ajuda -->
+                <div class="verification-help">
+                    <h3>Precisa de ajuda?</h3>
+                    <p></p>
+                    <div class="help-links">
+                        <a href="../home/faq.html"><i class="fas fa-question-circle"></i> FAQ</a>
+                        <a href="../home/contato.html"><i class="fas fa-headset"></i> Suporte</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Simplificado -->
+    <footer class="auth-footer">
+        <div class="auth-footer-container">
+            <p>&copy; 2024 - Todos os direitos reservados</p>
+            <div class="auth-footer-links">
+                <a href="../home/termos.html">Termos</a>
+                <a href="../home/privacidade.html">Privacidade</a>
+                <a href="../home/contato.html">Contato</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../assets/js/script.js"></script>
+</body>
+</html>
