@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="auth-body">
+    <!-- Header Simplificado -->
+    <header class="auth-header">
+        <div class="auth-header-container">
+            <div class="logo">
+                <a href="../home/index.html"></a>
+            </div>
+            <a href="../home/index.html" class="btn-back-home">
+                <i class="fas fa-arrow-left"></i> Voltar ao Site
+            </a>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <section class="auth-main">
+        <div class="verification-container">
+            <div class="verification-box">
+                
+                <!-- Ícone -->
+                <div class="verification-icon">
+                    <i class="fas fa-envelope-open-text"></i>
+                </div>
+                
+                <!-- Título -->
+                <h1>Verifique seu E-mail</h1>
+                <p class="verification-description"></p>
+                
+                <!-- E-mail Enviado -->
+                <div class="verification-email-sent">
+                    <p>Enviamos um e-mail para:</p>
+                    <div class="email-address">
+                        <i class="fas fa-envelope"></i>
+                        <span></span>
+                    </div>
+                </div>
+                
+                <!-- Instruções -->
+                <div class="verification-instructions">
+                    <div class="instruction-step">
+                        <div class="step-icon">
+                            <i class="fas fa-inbox"></i>
+                        </div>
+                        <div class="step-text">
+                            <h3>1. Acesse seu e-mail</h3>
+                            <p></p>
+                        </div>
+                    </div>
+                    
+                    <div class="instruction-step">
+                        <div class="step-icon">
+                            <i class="fas fa-mouse-pointer"></i>
+                        </div>
+                        <div class="step-text">
+                            <h3>2. Clique no link</h3>
+                            <p></p>
+                        </div>
+                    </div>
+                    
+                    <div class="instruction-step">
+                        <div class="step-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="step-text">
+                            <h3>3. Pronto!</h3>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Botões de Ação -->
+                <div class="verification-actions">
+                    <button class="btn-primary" id="btn-resend-email">
+                        <i class="fas fa-paper-plane"></i> Reenviar E-mail
+                    </button>
+                    
+                    <a href="login.html" class="btn-secondary">
+                        <i class="fas fa-sign-in-alt"></i> Ir para Login
+                    </a>
+                </div>
+                
+                <!-- Timer de Reenvio -->
+                <div class="resend-timer" id="resend-timer">
+                    <i class="fas fa-clock"></i>
+                    <span>Reenviar em <strong id="timer-countdown">60</strong> segundos</span>
+                </div>
+                
+                <!-- Alterar E-mail -->
+                <div class="change-email">
+                    <p>Digitou o e-mail errado? <a href="cadastro.html">Alterar e-mail</a></p>
+                </div>
+                
+                <!-- Ajuda -->
+                <div class="verification-help">
+                    <h3>Precisa de ajuda?</h3>
+                    <p></p>
+                    <div class="help-links">
+                        <a href="../home/faq.html"><i class="fas fa-question-circle"></i> FAQ</a>
+                        <a href="../home/contato.html"><i class="fas fa-headset"></i> Suporte</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Simplificado -->
+    <footer class="auth-footer">
+        <div class="auth-footer-container">
+            <p>&copy; 2024 - Todos os direitos reservados</p>
+            <div class="auth-footer-links">
+                <a href="../home/termos.html">Termos</a>
+                <a href="../home/privacidade.html">Privacidade</a>
+                <a href="../home/contato.html">Contato</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../assets/js/script.js"></script>
+</body>
+</html>
