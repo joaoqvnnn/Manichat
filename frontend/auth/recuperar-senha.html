@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="auth-body">
+    <!-- Header Simplificado -->
+    <header class="auth-header">
+        <div class="auth-header-container">
+            <div class="logo">
+                <a href="../home/index.html"></a>
+            </div>
+            <a href="../home/index.html" class="btn-back-home">
+                <i class="fas fa-arrow-left"></i> Voltar ao Site
+            </a>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <section class="auth-main">
+        <div class="recovery-container">
+            <div class="recovery-box">
+                
+                <!-- Cabeçalho -->
+                <div class="recovery-header">
+                    <div class="recovery-icon">
+                        <i class="fas fa-key"></i>
+                    </div>
+                    <h1>Recuperar Senha</h1>
+                    <p></p>
+                </div>
+                
+                <!-- Passos de Recuperação -->
+                <div class="recovery-steps">
+                    <div class="step active">
+                        <div class="step-circle">1</div>
+                        <span>Identificação</span>
+                    </div>
+                    <div class="step-line"></div>
+                    <div class="step">
+                        <div class="step-circle">2</div>
+                        <span>Verificação</span>
+                    </div>
+                    <div class="step-line"></div>
+                    <div class="step">
+                        <div class="step-circle">3</div>
+                        <span>Nova Senha</span>
+                    </div>
+                </div>
+                
+                <!-- Formulário de Recuperação -->
+                <form class="recovery-form">
+                    
+                    <!-- Campo E-mail -->
+                    <div class="form-group">
+                        <label for="recuperar-email">E-mail cadastrado *</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" id="recuperar-email" name="email" required>
+                        </div>
+                    </div>
+                    
+                    <!-- Opções de Recuperação -->
+                    <div class="recovery-options">
+                        <p>Como deseja receber o código de recuperação?</p>
+                        
+                        <label class="recovery-option">
+                            <input type="radio" name="metodo" value="email" checked>
+                            <div class="option-content">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <h3>E-mail</h3>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </label>
+                        
+                        <label class="recovery-option">
+                            <input type="radio" name="metodo" value="sms">
+                            <div class="option-content">
+                                <i class="fas fa-sms"></i>
+                                <div>
+                                    <h3>SMS</h3>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </label>
+                        
+                        <label class="recovery-option">
+                            <input type="radio" name="metodo" value="whatsapp">
+                            <div class="option-content">
+                                <i class="fab fa-whatsapp"></i>
+                                <div>
+                                    <h3>WhatsApp</h3>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                    
+                    <!-- Botão de Envio -->
+                    <button type="submit" class="btn-recovery-submit">
+                        Enviar Código <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+                
+                <!-- Links Adicionais -->
+                <div class="recovery-links">
+                    <p>Lembrou sua senha? <a href="login.html">Fazer Login</a></p>
+                    <p>Não tem uma conta? <a href="cadastro.html">Cadastre-se</a></p>
+                </div>
+                
+                <!-- Ajuda -->
+                <div class="recovery-help">
+                    <h3>Precisa de ajuda?</h3>
+                    <p></p>
+                    <div class="help-links">
+                        <a href="../home/faq.html"><i class="fas fa-question-circle"></i> FAQ</a>
+                        <a href="../home/contato.html"><i class="fas fa-headset"></i> Suporte</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Simplificado -->
+    <footer class="auth-footer">
+        <div class="auth-footer-container">
+            <p>&copy; 2024 - Todos os direitos reservados</p>
+            <div class="auth-footer-links">
+                <a href="../home/termos.html">Termos</a>
+                <a href="../home/privacidade.html">Privacidade</a>
+                <a href="../home/contato.html">Contato</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../assets/js/script.js"></script>
+</body>
+</html>
