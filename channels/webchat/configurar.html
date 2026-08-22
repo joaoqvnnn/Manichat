@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Header do App -->
+    <header class="app-header">
+        <div class="app-header-container">
+            <div class="app-logo">
+                <a href="../app/dashboard.html"></a>
+            </div>
+            
+            <div class="app-header-actions">
+                <button class="app-notification-btn">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-count">3</span>
+                </button>
+                
+                <div class="app-user-menu">
+                    <button class="app-user-avatar">
+                        <img src="../../assets/images/usuarios/avatar.jpg" alt="">
+                        <span></span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="app-user-dropdown">
+                        <a href="../app/dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+                        <a href="../autenticacao/login.html"><i class="fas fa-sign-out-alt"></i> Sair</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <section class="webchat-config-main">
+        <div class="webchat-config-container">
+            
+            <!-- Cabeçalho -->
+            <div class="webchat-config-header">
+                <div>
+                    <h1>Configurar Webchat</h1>
+                    <p></p>
+                </div>
+                <a href="personalizar.html" class="btn-primary">
+                    <i class="fas fa-palette"></i> Personalizar
+                </a>
+            </div>
+            
+            <!-- Formulário -->
+            <form class="webchat-config-form">
+                
+                <!-- Informações Básicas -->
+                <div class="form-section">
+                    <h2>Informações Básicas</h2>
+                    
+                    <div class="form-group">
+                        <label for="chat-nome">Nome do Chat *</label>
+                        <input type="text" id="chat-nome" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="chat-descricao">Descrição</label>
+                        <textarea id="chat-descricao" rows="3"></textarea>
+                    </div>
+                </div>
+                
+                <!-- Mensagens -->
+                <div class="form-section">
+                    <h2>Mensagens</h2>
+                    
+                    <div class="form-group">
+                        <label for="chat-saudacao">Mensagem de Saudação *</label>
+                        <textarea id="chat-saudacao" rows="3" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="chat-ausencia">Mensagem de Ausência</label>
+                        <textarea id="chat-ausencia" rows="3"></textarea>
+                    </div>
+                </div>
+                
+                <!-- Comportamento -->
+                <div class="form-section">
+                    <h2>Comportamento</h2>
+                    
+                    <div class="settings-toggle-item">
+                        <div class="toggle-info">
+                            <h3>Ativar Webchat</h3>
+                            <p></p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" checked>
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                    
+                    <div class="settings-toggle-item">
+                        <div class="toggle-info">
+                            <h3>Exibir em todas as páginas</h3>
+                            <p></p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" checked>
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                    
+                    <div class="settings-toggle-item">
+                        <div class="toggle-info">
+                            <h3>Exigir nome antes de iniciar</h3>
+                            <p></p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" checked>
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                    
+                    <div class="settings-toggle-item">
+                        <div class="toggle-info">
+                            <h3>Exigir e-mail antes de iniciar</h3>
+                            <p></p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" checked>
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                </div>
+                
+                <!-- Horário de Atendimento -->
+                <div class="form-section">
+                    <h2>Horário de Atendimento</h2>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Horário de Início</label>
+                            <input type="time" value="08:00">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Horário de Fim</label>
+                            <input type="time" value="18:00">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Integração com Automação -->
+                <div class="form-section">
+                    <h2>Integração com Automação</h2>
+                    
+                    <div class="form-group">
+                        <label>Fluxo de Automação</label>
+                        <select>
+                            <option value="">Selecione o fluxo...</option>
+                            <option value="fluxo1">Fluxo 1</option>
+                            <option value="fluxo2">Fluxo 2</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <!-- Botões -->
+                <div class="form-actions">
+                    <button type="submit" class="btn-primary">
+                        <i class="fas fa-save"></i> Salvar Configurações
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <script src="../../assets/js/script.js"></script>
+</body>
+</html>
