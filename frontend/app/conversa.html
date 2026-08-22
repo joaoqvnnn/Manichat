@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Header do App -->
+    <header class="app-header">
+        <div class="app-header-container">
+            <div class="app-logo">
+                <a href="dashboard.html"></a>
+            </div>
+            
+            <div class="app-header-actions">
+                <button class="app-notification-btn">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-count">3</span>
+                </button>
+                
+                <div class="app-user-menu">
+                    <button class="app-user-avatar">
+                        <img src="../../assets/images/usuarios/avatar.jpg" alt="">
+                        <span></span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="app-user-dropdown">
+                        <a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+                        <a href="../autenticacao/login.html"><i class="fas fa-sign-out-alt"></i> Sair</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <section class="app-main">
+        <div class="app-container">
+            
+            <!-- Sidebar -->
+            <aside class="app-sidebar">
+                <nav class="app-nav">
+                    <div class="app-nav-section">
+                        <h3>Principal</h3>
+                        <a href="dashboard.html">
+                            <i class="fas fa-dashboard"></i> Dashboard
+                        </a>
+                        <a href="automacoes.html">
+                            <i class="fas fa-robot"></i> Automações
+                        </a>
+                        <a href="contatos.html">
+                            <i class="fas fa-users"></i> Contatos
+                        </a>
+                        <a href="conversas.html" class="active">
+                            <i class="fas fa-comments"></i> Conversas
+                        </a>
+                    </div>
+                </nav>
+            </aside>
+            
+            <!-- Área da Conversa -->
+            <main class="conversation-main">
+                
+                <!-- Cabeçalho da Conversa -->
+                <div class="conversation-header">
+                    <a href="conversas.html" class="btn-back">
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                    <div class="conversation-contact">
+                        <img src="../../assets/images/contatos/contato1.jpg" alt="">
+                        <div>
+                            <h3></h3>
+                            <span class="online-status">Online</span>
+                        </div>
+                    </div>
+                    <div class="conversation-header-actions">
+                        <button><i class="fas fa-phone"></i></button>
+                        <button><i class="fas fa-video"></i></button>
+                        <button><i class="fas fa-info-circle"></i></button>
+                    </div>
+                </div>
+                
+                <!-- Mensagens -->
+                <div class="conversation-messages">
+                    
+                    <!-- Mensagem Recebida -->
+                    <div class="message received">
+                        <div class="message-bubble">
+                            <p></p>
+                            <span class="message-time"></span>
+                        </div>
+                    </div>
+                    
+                    <!-- Mensagem Enviada -->
+                    <div class="message sent">
+                        <div class="message-bubble">
+                            <p></p>
+                            <span class="message-time"></span>
+                        </div>
+                    </div>
+                    
+                    <!-- Mensagem Recebida -->
+                    <div class="message received">
+                        <div class="message-bubble">
+                            <p></p>
+                            <span class="message-time"></span>
+                        </div>
+                    </div>
+                    
+                    <!-- Mensagem Enviada -->
+                    <div class="message sent">
+                        <div class="message-bubble">
+                            <p></p>
+                            <span class="message-time"></span>
+                        </div>
+                    </div>
+                    
+                    <!-- Mensagem Automatizada -->
+                    <div class="message automated">
+                        <div class="message-bubble">
+                            <p></p>
+                            <span class="message-time"><i class="fas fa-robot"></i> </span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Área de Envio -->
+                <div class="conversation-input">
+                    <button class="btn-attach"><i class="fas fa-paperclip"></i></button>
+                    <input type="text" placeholder="Digite sua mensagem...">
+                    <button class="btn-send"><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </main>
+            
+            <!-- Sidebar de Informações -->
+            <aside class="conversation-sidebar">
+                <h3>Informações do Contato</h3>
+                
+                <div class="contact-info">
+                    <div class="info-item">
+                        <span>E-mail:</span>
+                        <strong></strong>
+                    </div>
+                    <div class="info-item">
+                        <span>Telefone:</span>
+                        <strong></strong>
+                    </div>
+                </div>
+                
+                <h3>Tags</h3>
+                <div class="tags-list">
+                    <span class="tag"></span>
+                    <span class="tag"></span>
+                </div>
+                
+                <h3>Automação Ativa</h3>
+                <div class="automation-active">
+                    <i class="fas fa-robot"></i>
+                    <span></span>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <script src="../../assets/js/script.js"></script>
+</body>
+</html>
