@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Header do App -->
+    <header class="app-header">
+        <div class="app-header-container">
+            <div class="app-logo">
+                <a href="../app/dashboard.html"></a>
+            </div>
+            
+            <div class="app-header-actions">
+                <button class="app-notification-btn">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-count">3</span>
+                </button>
+                
+                <div class="app-user-menu">
+                    <button class="app-user-avatar">
+                        <img src="../../assets/images/usuarios/avatar.jpg" alt="">
+                        <span></span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="app-user-dropdown">
+                        <a href="../app/dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+                        <a href="../autenticacao/login.html"><i class="fas fa-sign-out-alt"></i> Sair</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <section class="channel-templates-main">
+        <div class="channel-templates-container">
+            
+            <!-- Sidebar do Canal -->
+            <aside class="channel-sidebar">
+                <div class="channel-sidebar-header">
+                    <div class="channel-icon email">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>E-mail</h3>
+                    <span class="status-badge connected">Conectado</span>
+                </div>
+                
+                <nav class="channel-nav">
+                    <a href="configuracoes.html">
+                        <i class="fas fa-cog"></i> Configurações
+                    </a>
+                    <a href="templates.html" class="active">
+                        <i class="fas fa-file-alt"></i> Templates
+                    </a>
+                    <a href="campanhas.html">
+                        <i class="fas fa-bullhorn"></i> Campanhas
+                    </a>
+                    <a href="contatos.html">
+                        <i class="fas fa-users"></i> Contatos
+                    </a>
+                    <a href="automacoes.html">
+                        <i class="fas fa-robot"></i> Automações
+                    </a>
+                </nav>
+            </aside>
+            
+            <!-- Conteúdo Principal -->
+            <main class="channel-content">
+                
+                <!-- Cabeçalho -->
+                <div class="channel-content-header">
+                    <div>
+                        <h1>Templates de E-mail</h1>
+                        <p></p>
+                    </div>
+                    <button class="btn-primary">
+                        <i class="fas fa-plus"></i> Novo Template
+                    </button>
+                </div>
+                
+                <!-- Filtros -->
+                <div class="app-filters">
+                    <button class="template-filter active">Todos</button>
+                    <button class="template-filter">Transacionais</button>
+                    <button class="template-filter">Marketing</button>
+                    <button class="template-filter">Notificações</button>
+                </div>
+                
+                <!-- Grid de Templates -->
+                <div class="templates-grid">
+                    
+                    <!-- Template 1 -->
+                    <div class="template-card">
+                        <div class="template-preview">
+                            <div class="email-preview-header">
+                                <span>Assunto: </span>
+                            </div>
+                            <div class="email-preview-body">
+                                <p></p>
+                            </div>
+                        </div>
+                        <div class="template-info">
+                            <h3></h3>
+                            <span class="template-type">Transacional</span>
+                        </div>
+                        <div class="template-actions">
+                            <button class="btn-edit"><i class="fas fa-edit"></i></button>
+                            <button class="btn-duplicate"><i class="fas fa-copy"></i></button>
+                            <button class="btn-delete"><i class="fas fa-trash"></i></button>
+                        </div>
+                    </div>
+                    
+                    <!-- Template 2 -->
+                    <div class="template-card">
+                        <div class="template-preview">
+                            <div class="email-preview-header">
+                                <span>Assunto: </span>
+                            </div>
+                            <div class="email-preview-body">
+                                <p></p>
+                            </div>
+                        </div>
+                        <div class="template-info">
+                            <h3></h3>
+                            <span class="template-type">Marketing</span>
+                        </div>
+                        <div class="template-actions">
+                            <button class="btn-edit"><i class="fas fa-edit"></i></button>
+                            <button class="btn-duplicate"><i class="fas fa-copy"></i></button>
+                            <button class="btn-delete"><i class="fas fa-trash"></i></button>
+                        </div>
+                    </div>
+                    
+                    <!-- Template 3 -->
+                    <div class="template-card">
+                        <div class="template-preview">
+                            <div class="email-preview-header">
+                                <span>Assunto: </span>
+                            </div>
+                            <div class="email-preview-body">
+                                <p></p>
+                            </div>
+                        </div>
+                        <div class="template-info">
+                            <h3></h3>
+                            <span class="template-type">Notificação</span>
+                        </div>
+                        <div class="template-actions">
+                            <button class="btn-edit"><i class="fas fa-edit"></i></button>
+                            <button class="btn-duplicate"><i class="fas fa-copy"></i></button>
+                            <button class="btn-delete"><i class="fas fa-trash"></i></button>
+                        </div>
+                    </div>
+                    
+                    <!-- Template 4 -->
+                    <div class="template-card">
+                        <div class="template-preview">
+                            <div class="email-preview-header">
+                                <span>Assunto: </span>
+                            </div>
+                            <div class="email-preview-body">
+                                <p></p>
+                            </div>
+                        </div>
+                        <div class="template-info">
+                            <h3></h3>
+                            <span class="template-type">Marketing</span>
+                        </div>
+                        <div class="template-actions">
+                            <button class="btn-edit"><i class="fas fa-edit"></i></button>
+                            <button class="btn-duplicate"><i class="fas fa-copy"></i></button>
+                            <button class="btn-delete"><i class="fas fa-trash"></i></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Formulário de Novo Template -->
+                <div class="new-template-form">
+                    <h2>Novo Template</h2>
+                    
+                    <form>
+                        <div class="form-group">
+                            <label for="template-nome">Nome do Template *</label>
+                            <input type="text" id="template-nome" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="template-assunto">Assunto *</label>
+                            <input type="text" id="template-assunto" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="template-tipo">Tipo</label>
+                            <select id="template-tipo">
+                                <option value="transacional">Transacional</option>
+                                <option value="marketing">Marketing</option>
+                                <option value="notificacao">Notificação</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="template-conteudo">Conteúdo HTML *</label>
+                            <textarea id="template-conteudo" rows="8" required></textarea>
+                        </div>
+                        
+                        <!-- Variáveis -->
+                        <div class="variables-section">
+                            <label>Inserir Variável</label>
+                            <div class="variables-list">
+                                <button class="variable-btn">{{nome}}</button>
+                                <button class="variable-btn">{{email}}</button>
+                                <button class="variable-btn">{{telefone}}</button>
+                                <button class="variable-btn">{{data}}</button>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary">
+                            <i class="fas fa-save"></i> Salvar Template
+                        </button>
+                    </form>
+                </div>
+            </main>
+        </div>
+    </section>
+
+    <script src="../../assets/js/script.js"></script>
+</body>
+</html>
