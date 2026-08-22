@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Header do App -->
+    <header class="app-header">
+        <div class="app-header-container">
+            <div class="app-logo">
+                <a href="dashboard.html"></a>
+            </div>
+            
+            <div class="app-header-actions">
+                <button class="app-search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+                
+                <button class="app-notification-btn">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-count">3</span>
+                </button>
+                
+                <div class="app-user-menu">
+                    <button class="app-user-avatar">
+                        <img src="../../assets/images/usuarios/avatar.jpg" alt="">
+                        <span></span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="app-user-dropdown">
+                        <a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+                        <a href="perfil.html"><i class="fas fa-user"></i> Perfil</a>
+                        <a href="configuracoes.html"><i class="fas fa-cog"></i> Configurações</a>
+                        <a href="../autenticacao/login.html"><i class="fas fa-sign-out-alt"></i> Sair</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <section class="app-main">
+        <div class="app-container">
+            
+            <!-- Sidebar -->
+            <aside class="app-sidebar">
+                <nav class="app-nav">
+                    <div class="app-nav-section">
+                        <h3>Principal</h3>
+                        <a href="dashboard.html" class="active">
+                            <i class="fas fa-dashboard"></i> Dashboard
+                        </a>
+                        <a href="automacoes.html">
+                            <i class="fas fa-robot"></i> Automações
+                        </a>
+                        <a href="contatos.html">
+                            <i class="fas fa-users"></i> Contatos
+                        </a>
+                        <a href="mensagens.html">
+                            <i class="fas fa-comments"></i> Mensagens
+                        </a>
+                    </div>
+                    
+                    <div class="app-nav-section">
+                        <h3>Ferramentas</h3>
+                        <a href="campanhas.html">
+                            <i class="fas fa-bullhorn"></i> Campanhas
+                        </a>
+                        <a href="templates.html">
+                            <i class="fas fa-file-alt"></i> Templates
+                        </a>
+                        <a href="relatorios.html">
+                            <i class="fas fa-chart-bar"></i> Relatórios
+                        </a>
+                    </div>
+                    
+                    <div class="app-nav-section">
+                        <h3>Configurações</h3>
+                        <a href="integracoes.html">
+                            <i class="fas fa-plug"></i> Integrações
+                        </a>
+                        <a href="configuracoes.html">
+                            <i class="fas fa-cog"></i> Configurações
+                        </a>
+                    </div>
+                </nav>
+            </aside>
+            
+            <!-- Conteúdo Principal -->
+            <main class="app-content">
+                
+                <!-- Boas-vindas -->
+                <div class="app-welcome">
+                    <div class="welcome-text">
+                        <h1>Olá, <span></span>!</h1>
+                        <p></p>
+                    </div>
+                    <a href="automacoes.html" class="btn-primary">
+                        <i class="fas fa-plus"></i> Nova Automação
+                    </a>
+                </div>
+                
+                <!-- Cards de Estatísticas -->
+                <div class="app-stats-grid">
+                    <div class="app-stat-card">
+                        <div class="app-stat-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="app-stat-info">
+                            <span class="app-stat-value"></span>
+                            <span class="app-stat-label">Automações Ativas</span>
+                        </div>
+                    </div>
+                    
+                    <div class="app-stat-card">
+                        <div class="app-stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="app-stat-info">
+                            <span class="app-stat-value"></span>
+                            <span class="app-stat-label">Total de Contatos</span>
+                        </div>
+                    </div>
+                    
+                    <div class="app-stat-card">
+                        <div class="app-stat-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <div class="app-stat-info">
+                            <span class="app-stat-value"></span>
+                            <span class="app-stat-label">Mensagens Enviadas</span>
+                        </div>
+                    </div>
+                    
+                    <div class="app-stat-card">
+                        <div class="app-stat-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="app-stat-info">
+                            <span class="app-stat-value">%</span>
+                            <span class="app-stat-label">Taxa de Resposta</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Automações Recentes -->
+                <div class="app-section">
+                    <div class="app-section-header">
+                        <h2>Automações Recentes</h2>
+                        <a href="automacoes.html" class="view-all">Ver Todas</a>
+                    </div>
+                    
+                    <div class="automations-list">
+                        <div class="automation-card">
+                            <div class="automation-icon">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="automation-info">
+                                <h3></h3>
+                                <p></p>
+                            </div>
+                            <div class="automation-status">
+                                <span class="status-badge active">Ativa</span>
+                            </div>
+                            <div class="automation-actions">
+                                <button class="btn-edit"><i class="fas fa-edit"></i></button>
+                                <button class="btn-delete"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                        
+                        <div class="automation-card">
+                            <div class="automation-icon">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="automation-info">
+                                <h3></h3>
+                                <p></p>
+                            </div>
+                            <div class="automation-status">
+                                <span class="status-badge active">Ativa</span>
+                            </div>
+                            <div class="automation-actions">
+                                <button class="btn-edit"><i class="fas fa-edit"></i></button>
+                                <button class="btn-delete"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                        
+                        <div class="automation-card">
+                            <div class="automation-icon">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="automation-info">
+                                <h3></h3>
+                                <p></p>
+                            </div>
+                            <div class="automation-status">
+                                <span class="status-badge paused">Pausada</span>
+                            </div>
+                            <div class="automation-actions">
+                                <button class="btn-edit"><i class="fas fa-edit"></i></button>
+                                <button class="btn-delete"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Atividade Recente -->
+                <div class="app-section">
+                    <div class="app-section-header">
+                        <h2>Atividade Recente</h2>
+                    </div>
+                    
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-comment"></i>
+                            </div>
+                            <div class="activity-content">
+                                <h4></h4>
+                                <p></p>
+                            </div>
+                            <span class="activity-date"></span>
+                        </div>
+                        
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-user-plus"></i>
+                            </div>
+                            <div class="activity-content">
+                                <h4></h4>
+                                <p></p>
+                            </div>
+                            <span class="activity-date"></span>
+                        </div>
+                        
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="activity-content">
+                                <h4></h4>
+                                <p></p>
+                            </div>
+                            <span class="activity-date"></span>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </section>
+
+    <script src="../../assets/js/script.js"></script>
+</body>
+</html>
