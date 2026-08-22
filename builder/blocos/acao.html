@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Header do Builder -->
+    <header class="builder-header">
+        <div class="builder-header-container">
+            <div class="builder-logo">
+                <a href="../index.html">
+                    <i class="fas fa-cubes"></i>
+                    <span>Builder</span>
+                </a>
+            </div>
+            
+            <div class="builder-header-actions">
+                <a href="../editar-fluxo.html" class="btn-back-flow">
+                    <i class="fas fa-arrow-left"></i> Voltar ao Fluxo
+                </a>
+                <button class="btn-save-block"><i class="fas fa-save"></i> Salvar Bloco</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <section class="block-editor-main">
+        <div class="block-editor-container">
+            
+            <!-- Cabeçalho -->
+            <div class="block-editor-header">
+                <div class="block-icon action">
+                    <i class="fas fa-cog"></i>
+                </div>
+                <h1>Configurar Ação</h1>
+                <p></p>
+            </div>
+            
+            <!-- Tipo de Ação -->
+            <div class="form-section">
+                <h2>Tipo de Ação</h2>
+                
+                <div class="action-type-options">
+                    <label class="action-type-card">
+                        <input type="radio" name="tipo-acao" value="enviar-mensagem" checked>
+                        <i class="fas fa-paper-plane"></i>
+                        <h3>Enviar Mensagem</h3>
+                    </label>
+                    
+                    <label class="action-type-card">
+                        <input type="radio" name="tipo-acao" value="adicionar-tag">
+                        <i class="fas fa-tag"></i>
+                        <h3>Adicionar Tag</h3>
+                    </label>
+                    
+                    <label class="action-type-card">
+                        <input type="radio" name="tipo-acao" value="notificar">
+                        <i class="fas fa-bell"></i>
+                        <h3>Notificar</h3>
+                    </label>
+                    
+                    <label class="action-type-card">
+                        <input type="radio" name="tipo-acao" value="atualizar-campo">
+                        <i class="fas fa-database"></i>
+                        <h3>Atualizar Campo</h3>
+                    </label>
+                </div>
+            </div>
+            
+            <!-- Configuração da Ação -->
+            <div class="form-section">
+                <h2>Configuração</h2>
+                
+                <!-- Para Enviar Mensagem -->
+                <div class="action-config" id="config-enviar-mensagem">
+                    <div class="form-group">
+                        <label>Mensagem</label>
+                        <textarea rows="4" placeholder=""></textarea>
+                    </div>
+                </div>
+                
+                <!-- Para Adicionar Tag -->
+                <div class="action-config" id="config-adicionar-tag" style="display: none;">
+                    <div class="form-group">
+                        <label>Tag</label>
+                        <select>
+                            <option value="">Selecione...</option>
+                            <option value="tag1">Tag 1</option>
+                            <option value="tag2">Tag 2</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <!-- Para Notificar -->
+                <div class="action-config" id="config-notificar" style="display: none;">
+                    <div class="form-group">
+                        <label>Destinatário</label>
+                        <input type="email" placeholder="email@exemplo.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Mensagem</label>
+                        <textarea rows="3" placeholder=""></textarea>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Atraso -->
+            <div class="form-section">
+                <h2>Atraso</h2>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Tempo</label>
+                        <input type="number" min="0" value="0">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Unidade</label>
+                        <select>
+                            <option value="segundos">Segundos</option>
+                            <option value="minutos">Minutos</option>
+                            <option value="horas">Horas</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Condições de Execução -->
+            <div class="form-section">
+                <h2>Condições de Execução</h2>
+                
+                <div class="form-group">
+                    <label>Executar apenas se</label>
+                    <select>
+                        <option value="sempre">Sempre</option>
+                        <option value="campo-vazio">Campo está vazio</option>
+                        <option value="campo-preenchido">Campo está preenchido</option>
+                        <option value="possui-tag">Contato possui tag</option>
+                        <option value="nao-possui-tag">Contato não possui tag</option>
+                    </select>
+                </div>
+            </div>
+            
+            <!-- Preview -->
+            <div class="form-section">
+                <h2>Resumo</h2>
+                
+                <div class="action-summary">
+                    <div class="summary-item">
+                        <span>Tipo:</span>
+                        <strong>Enviar Mensagem</strong>
+                    </div>
+                    <div class="summary-item">
+                        <span>Atraso:</span>
+                        <strong>0 segundos</strong>
+                    </div>
+                    <div class="summary-item">
+                        <span>Condição:</span>
+                        <strong>Sempre</strong>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Botões -->
+            <div class="form-actions">
+                <button type="submit" class="btn-primary">
+                    <i class="fas fa-save"></i> Salvar Ação
+                </button>
+                
+                <a href="../editar-fluxo.html" class="btn-cancel">
+                    <i class="fas fa-times"></i> Cancelar
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script src="../../assets/js/script.js"></script>
+</body>
+</html>
