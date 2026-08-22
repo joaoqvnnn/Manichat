@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Header do Builder -->
+    <header class="builder-header">
+        <div class="builder-header-container">
+            <div class="builder-logo">
+                <a href="../index.html">
+                    <i class="fas fa-cubes"></i>
+                    <span>Builder</span>
+                </a>
+            </div>
+            
+            <div class="builder-header-actions">
+                <a href="../editar-fluxo.html" class="btn-back-flow">
+                    <i class="fas fa-arrow-left"></i> Voltar ao Fluxo
+                </a>
+                <button class="btn-save-block"><i class="fas fa-save"></i> Salvar Bloco</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <section class="block-editor-main">
+        <div class="block-editor-container">
+            
+            <!-- Cabeçalho -->
+            <div class="block-editor-header">
+                <div class="block-icon condition">
+                    <i class="fas fa-question-circle"></i>
+                </div>
+                <h1>Configurar Pergunta</h1>
+                <p></p>
+            </div>
+            
+            <!-- Texto da Pergunta -->
+            <div class="form-section">
+                <h2>Pergunta</h2>
+                
+                <div class="form-group">
+                    <label>Texto da Pergunta *</label>
+                    <textarea rows="3" placeholder=""></textarea>
+                </div>
+            </div>
+            
+            <!-- Tipo de Resposta -->
+            <div class="form-section">
+                <h2>Tipo de Resposta</h2>
+                
+                <div class="answer-type-options">
+                    <label class="answer-type-card">
+                        <input type="radio" name="tipo-resposta" value="texto" checked>
+                        <i class="fas fa-font"></i>
+                        <h3>Texto Livre</h3>
+                    </label>
+                    
+                    <label class="answer-type-card">
+                        <input type="radio" name="tipo-resposta" value="multipla">
+                        <i class="fas fa-list"></i>
+                        <h3>Múltipla Escolha</h3>
+                    </label>
+                    
+                    <label class="answer-type-card">
+                        <input type="radio" name="tipo-resposta" value="numero">
+                        <i class="fas fa-hashtag"></i>
+                        <h3>Número</h3>
+                    </label>
+                </div>
+            </div>
+            
+            <!-- Opções de Resposta (Múltipla Escolha) -->
+            <div class="form-section" id="opcoes-resposta">
+                <h2>Opções de Resposta</h2>
+                
+                <div class="options-list">
+                    <div class="option-item">
+                        <input type="text" placeholder="Opção 1">
+                        <button class="btn-remove-option"><i class="fas fa-times"></i></button>
+                    </div>
+                    <div class="option-item">
+                        <input type="text" placeholder="Opção 2">
+                        <button class="btn-remove-option"><i class="fas fa-times"></i></button>
+                    </div>
+                </div>
+                
+                <button class="btn-add-option">
+                    <i class="fas fa-plus"></i> Adicionar Opção
+                </button>
+            </div>
+            
+            <!-- Validação -->
+            <div class="form-section">
+                <h2>Validação</h2>
+                
+                <div class="form-group">
+                    <label class="checkbox-container">
+                        <input type="checkbox" checked>
+                        <span class="checkmark"></span>
+                            Resposta obrigatória
+                    </label>
+                </div>
+                
+                <div class="form-group">
+                    <label>Salvar resposta em</label>
+                    <select>
+                        <option value="">Selecione o campo...</option>
+                        <option value="campo1">Campo Personalizado 1</option>
+                        <option value="campo2">Campo Personalizado 2</option>
+                    </select>
+                </div>
+            </div>
+            
+            <!-- Preview -->
+            <div class="form-section">
+                <h2>Pré-visualização</h2>
+                
+                <div class="question-preview">
+                    <div class="msg bot">
+                        <div class="msg-bubble">
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Botões -->
+            <div class="form-actions">
+                <button type="submit" class="btn-primary">
+                    <i class="fas fa-save"></i> Salvar Pergunta
+                </button>
+                
+                <a href="../editar-fluxo.html" class="btn-cancel">
+                    <i class="fas fa-times"></i> Cancelar
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script src="../../assets/js/script.js"></script>
+</body>
+</html>
