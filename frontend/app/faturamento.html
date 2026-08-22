@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Header do App -->
+    <header class="app-header">
+        <div class="app-header-container">
+            <div class="app-logo">
+                <a href="dashboard.html"></a>
+            </div>
+            
+            <div class="app-header-actions">
+                <button class="app-notification-btn">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-count">3</span>
+                </button>
+                
+                <div class="app-user-menu">
+                    <button class="app-user-avatar">
+                        <img src="../../assets/images/usuarios/avatar.jpg" alt="">
+                        <span></span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="app-user-dropdown">
+                        <a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+                        <a href="../autenticacao/login.html"><i class="fas fa-sign-out-alt"></i> Sair</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <section class="app-main">
+        <div class="app-container">
+            
+            <!-- Sidebar -->
+            <aside class="app-sidebar">
+                <nav class="app-nav">
+                    <div class="app-nav-section">
+                        <h3>Principal</h3>
+                        <a href="dashboard.html">
+                            <i class="fas fa-dashboard"></i> Dashboard
+                        </a>
+                    </div>
+                    
+                    <div class="app-nav-section">
+                        <h3>Ferramentas</h3>
+                        <a href="faturamento.html" class="active">
+                            <i class="fas fa-credit-card"></i> Faturamento
+                        </a>
+                        <a href="planos.html">
+                            <i class="fas fa-box"></i> Planos
+                        </a>
+                    </div>
+                </nav>
+            </aside>
+            
+            <!-- Conteúdo Principal -->
+            <main class="app-content">
+                
+                <!-- Cabeçalho -->
+                <div class="app-content-header">
+                    <div>
+                        <h1>Faturamento</h1>
+                        <p></p>
+                    </div>
+                </div>
+                
+                <!-- Plano Atual -->
+                <div class="current-plan-card">
+                    <div class="plan-icon">
+                        <i class="fas fa-box"></i>
+                    </div>
+                    <div class="plan-info">
+                        <h2>Plano Atual</h2>
+                        <h3></h3>
+                        <p>R$ /mês</p>
+                    </div>
+                    <div class="plan-actions">
+                        <a href="planos.html" class="btn-primary">Mudar Plano</a>
+                        <button class="btn-cancel-plan">Cancelar Assinatura</button>
+                    </div>
+                </div>
+                
+                <!-- Uso do Plano -->
+                <div class="plan-usage">
+                    <h2>Uso do Plano</h2>
+                    
+                    <div class="usage-item">
+                        <div class="usage-header">
+                            <span>Mensagens</span>
+                            <span>/</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 60%;"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="usage-item">
+                        <div class="usage-header">
+                            <span>Contatos</span>
+                            <span>/</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 40%;"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="usage-item">
+                        <div class="usage-header">
+                            <span>Automações</span>
+                            <span>/</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Histórico de Faturas -->
+                <div class="invoices-list">
+                    <h2>Histórico de Faturas</h2>
+                    
+                    <table class="invoices-table">
+                        <thead>
+                            <tr>
+                                <th>Fatura</th>
+                                <th>Data</th>
+                                <th>Valor</th>
+                                <th>Status</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#</td>
+                                <td></td>
+                                <td>R$</td>
+                                <td><span class="status-badge paid">Paga</span></td>
+                                <td>
+                                    <button class="btn-download"><i class="fas fa-download"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#</td>
+                                <td></td>
+                                <td>R$</td>
+                                <td><span class="status-badge paid">Paga</span></td>
+                                <td>
+                                    <button class="btn-download"><i class="fas fa-download"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <!-- Métodos de Pagamento -->
+                <div class="payment-methods-section">
+                    <h2>Métodos de Pagamento</h2>
+                    
+                    <div class="saved-payment">
+                        <div class="payment-icon">
+                            <i class="far fa-credit-card"></i>
+                        </div>
+                        <div class="payment-info">
+                            <h3>Cartão de Crédito</h3>
+                            <p>•••• •••• •••• </p>
+                        </div>
+                        <button class="btn-remove-payment"><i class="fas fa-trash"></i></button>
+                    </div>
+                    
+                    <button class="btn-add-payment">
+                        <i class="fas fa-plus"></i> Adicionar Cartão
+                    </button>
+                </div>
+            </main>
+        </div>
+    </section>
+
+    <script src="../../assets/js/script.js"></script>
+</body>
+</html>
