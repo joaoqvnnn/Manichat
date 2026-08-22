@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Header do App -->
+    <header class="app-header">
+        <div class="app-header-container">
+            <div class="app-logo">
+                <a href="dashboard.html"></a>
+            </div>
+            
+            <div class="app-header-actions">
+                <button class="app-notification-btn">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-count">3</span>
+                </button>
+                
+                <div class="app-user-menu">
+                    <button class="app-user-avatar">
+                        <img src="../../assets/images/usuarios/avatar.jpg" alt="">
+                        <span></span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="app-user-dropdown">
+                        <a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+                        <a href="../autenticacao/login.html"><i class="fas fa-sign-out-alt"></i> Sair</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <section class="app-main">
+        <div class="app-container">
+            
+            <!-- Sidebar -->
+            <aside class="app-sidebar">
+                <nav class="app-nav">
+                    <div class="app-nav-section">
+                        <h3>Principal</h3>
+                        <a href="dashboard.html">
+                            <i class="fas fa-dashboard"></i> Dashboard
+                        </a>
+                    </div>
+                    
+                    <div class="app-nav-section">
+                        <h3>Ferramentas</h3>
+                        <a href="integracoes.html">
+                            <i class="fas fa-plug"></i> Integrações
+                        </a>
+                        <a href="api.html" class="active">
+                            <i class="fas fa-code"></i> API
+                        </a>
+                    </div>
+                </nav>
+            </aside>
+            
+            <!-- Conteúdo Principal -->
+            <main class="app-content">
+                
+                <!-- Cabeçalho -->
+                <div class="app-content-header">
+                    <div>
+                        <h1>API</h1>
+                        <p></p>
+                    </div>
+                </div>
+                
+                <!-- Chave de API -->
+                <div class="api-key-section">
+                    <h2>Chave de API</h2>
+                    
+                    <div class="api-key-display">
+                        <div class="api-key">
+                            <span>sk_live_********************</span>
+                            <button class="btn-copy"><i class="fas fa-copy"></i></button>
+                            <button class="btn-regenerate"><i class="fas fa-refresh"></i></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Webhooks -->
+                <div class="webhooks-section">
+                    <h2>Webhooks</h2>
+                    
+                    <div class="form-group">
+                        <label for="webhook-url">URL do Webhook</label>
+                        <input type="url" id="webhook-url" placeholder="https://...">
+                    </div>
+                    
+                    <div class="webhook-events">
+                        <label class="checkbox-container">
+                            <input type="checkbox" checked>
+                            <span class="checkmark"></span>
+                            Nova Mensagem
+                        </label>
+                        <label class="checkbox-container">
+                            <input type="checkbox" checked>
+                            <span class="checkmark"></span>
+                            Novo Contato
+                        </label>
+                        <label class="checkbox-container">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            Mensagem Entregue
+                        </label>
+                    </div>
+                </div>
+                
+                <!-- Documentação -->
+                <div class="api-docs">
+                    <h2>Documentação</h2>
+                    
+                    <div class="api-endpoint">
+                        <h3>Enviar Mensagem</h3>
+                        <pre><code>POST /api/v1/messages
+Content-Type: application/json
+
+{
+  "to": "",
+  "message": ""
+}</code></pre>
+                    </div>
+                    
+                    <div class="api-endpoint">
+                        <h3>Buscar Contatos</h3>
+                        <pre><code>GET /api/v1/contacts
+Authorization: Bearer sk_live_...</code></pre>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </section>
+
+    <script src="../../assets/js/script.js"></script>
+</body>
+</html>
