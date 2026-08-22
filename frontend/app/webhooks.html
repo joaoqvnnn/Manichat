@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Header do App -->
+    <header class="app-header">
+        <div class="app-header-container">
+            <div class="app-logo">
+                <a href="dashboard.html"></a>
+            </div>
+            
+            <div class="app-header-actions">
+                <button class="app-notification-btn">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-count">3</span>
+                </button>
+                
+                <div class="app-user-menu">
+                    <button class="app-user-avatar">
+                        <img src="../../assets/images/usuarios/avatar.jpg" alt="">
+                        <span></span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="app-user-dropdown">
+                        <a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+                        <a href="../autenticacao/login.html"><i class="fas fa-sign-out-alt"></i> Sair</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <section class="app-main">
+        <div class="app-container">
+            
+            <!-- Sidebar -->
+            <aside class="app-sidebar">
+                <nav class="app-nav">
+                    <div class="app-nav-section">
+                        <h3>Principal</h3>
+                        <a href="dashboard.html">
+                            <i class="fas fa-dashboard"></i> Dashboard
+                        </a>
+                    </div>
+                    
+                    <div class="app-nav-section">
+                        <h3>Ferramentas</h3>
+                        <a href="api.html">
+                            <i class="fas fa-code"></i> API
+                        </a>
+                        <a href="webhooks.html" class="active">
+                            <i class="fas fa-link"></i> Webhooks
+                        </a>
+                    </div>
+                </nav>
+            </aside>
+            
+            <!-- Conteúdo Principal -->
+            <main class="app-content">
+                
+                <!-- Cabeçalho -->
+                <div class="app-content-header">
+                    <div>
+                        <h1>Webhooks</h1>
+                        <p></p>
+                    </div>
+                    <button class="btn-primary">
+                        <i class="fas fa-plus"></i> Novo Webhook
+                    </button>
+                </div>
+                
+                <!-- Lista de Webhooks -->
+                <div class="webhooks-list">
+                    
+                    <!-- Webhook 1 -->
+                    <div class="webhook-card">
+                        <div class="webhook-header">
+                            <div class="webhook-icon">
+                                <i class="fas fa-link"></i>
+                            </div>
+                            <div class="webhook-info">
+                                <h3></h3>
+                                <p></p>
+                            </div>
+                            <span class="status-badge active">Ativo</span>
+                        </div>
+                        
+                        <div class="webhook-events">
+                            <span class="event-tag">Nova Mensagem</span>
+                            <span class="event-tag">Novo Contato</span>
+                        </div>
+                        
+                        <div class="webhook-stats">
+                            <span>Última entrega: </span>
+                            <span>Sucesso: </span>
+                            <span>Falhas: </span>
+                        </div>
+                        
+                        <div class="webhook-actions">
+                            <button class="btn-edit"><i class="fas fa-edit"></i></button>
+                            <button class="btn-test"><i class="fas fa-paper-plane"></i> Testar</button>
+                            <button class="btn-delete"><i class="fas fa-trash"></i></button>
+                        </div>
+                    </div>
+                    
+                    <!-- Webhook 2 -->
+                    <div class="webhook-card">
+                        <div class="webhook-header">
+                            <div class="webhook-icon">
+                                <i class="fas fa-link"></i>
+                            </div>
+                            <div class="webhook-info">
+                                <h3></h3>
+                                <p></p>
+                            </div>
+                            <span class="status-badge inactive">Inativo</span>
+                        </div>
+                        
+                        <div class="webhook-events">
+                            <span class="event-tag">Mensagem Entregue</span>
+                        </div>
+                        
+                        <div class="webhook-stats">
+                            <span>Última entrega: </span>
+                            <span>Sucesso: </span>
+                            <span>Falhas: </span>
+                        </div>
+                        
+                        <div class="webhook-actions">
+                            <button class="btn-edit"><i class="fas fa-edit"></i></button>
+                            <button class="btn-test"><i class="fas fa-paper-plane"></i> Testar</button>
+                            <button class="btn-delete"><i class="fas fa-trash"></i></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Formulário de Novo Webhook -->
+                <div class="new-webhook-form">
+                    <h2>Novo Webhook</h2>
+                    
+                    <form>
+                        <div class="form-group">
+                            <label for="webhook-nome">Nome do Webhook *</label>
+                            <input type="text" id="webhook-nome" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="webhook-url">URL de Destino *</label>
+                            <input type="url" id="webhook-url" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Eventos</label>
+                            <div class="events-list">
+                                <label class="checkbox-container">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                    Nova Mensagem
+                                </label>
+                                <label class="checkbox-container">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                    Novo Contato
+                                </label>
+                                <label class="checkbox-container">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                    Mensagem Entregue
+                                </label>
+                                <label class="checkbox-container">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                    Mensagem Lida
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary">
+                            <i class="fas fa-save"></i> Salvar Webhook
+                        </button>
+                    </form>
+                </div>
+            </main>
+        </div>
+    </section>
+
+    <script src="../../assets/js/script.js"></script>
+</body>
+</html>
