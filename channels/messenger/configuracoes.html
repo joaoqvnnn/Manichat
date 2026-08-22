@@ -38,110 +38,141 @@
     </header>
 
     <!-- Conteúdo Principal -->
-    <section class="channel-connect-main">
-        <div class="channel-connect-container">
+    <section class="channel-settings-main">
+        <div class="channel-settings-container">
             
-            <!-- Cabeçalho -->
-            <div class="channel-connect-header">
-                <a href="../app/integracoes.html" class="btn-back">
-                    <i class="fas fa-arrow-left"></i> Voltar
-                </a>
-                <h1>Conectar Messenger</h1>
-            </div>
+            <!-- Sidebar do Canal -->
+            <aside class="channel-sidebar">
+                <div class="channel-sidebar-header">
+                    <div class="channel-icon messenger">
+                        <i class="fab fa-facebook-messenger"></i>
+                    </div>
+                    <h3>Messenger</h3>
+                    <span class="status-badge connected">Conectado</span>
+                </div>
+                
+                <nav class="channel-nav">
+                    <a href="configuracoes.html" class="active">
+                        <i class="fas fa-cog"></i> Configurações
+                    </a>
+                    <a href="paginas.html">
+                        <i class="fas fa-file"></i> Páginas
+                    </a>
+                    <a href="mensagens.html">
+                        <i class="fas fa-comments"></i> Mensagens
+                    </a>
+                    <a href="contatos.html">
+                        <i class="fas fa-users"></i> Contatos
+                    </a>
+                    <a href="automacoes.html">
+                        <i class="fas fa-robot"></i> Automações
+                    </a>
+                </nav>
+            </aside>
             
-            <!-- Card de Conexão -->
-            <div class="channel-connect-card">
+            <!-- Conteúdo Principal -->
+            <main class="channel-content">
                 
-                <!-- Ícone -->
-                <div class="channel-icon messenger">
-                    <i class="fab fa-facebook-messenger"></i>
-                </div>
-                
-                <!-- Título -->
-                <h2>Conectar sua Página do Facebook</h2>
-                <p></p>
-                
-                <!-- Métodos de Conexão -->
-                <div class="connection-methods">
-                    <div class="connection-method-card">
-                        <div class="method-icon">
-                            <i class="fab fa-facebook"></i>
-                        </div>
-                        <h3>Login com Facebook</h3>
-                        <p></p>
-                        <button class="btn-connect-facebook">
-                            <i class="fab fa-facebook"></i> Conectar com Facebook
-                        </button>
-                    </div>
-                    
-                    <div class="connection-method-card">
-                        <div class="method-icon">
-                            <i class="fas fa-key"></i>
-                        </div>
-                        <h3>Token de Acesso</h3>
-                        <p></p>
-                        <div class="token-input-group">
-                            <input type="text" placeholder="Digite o token de acesso...">
-                            <button class="btn-connect-token">
-                                <i class="fas fa-link"></i> Conectar
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Benefícios -->
-                <div class="channel-benefits">
-                    <div class="benefit-item">
-                        <i class="fas fa-check-circle"></i>
-                        <p></p>
-                    </div>
-                    
-                    <div class="benefit-item">
-                        <i class="fas fa-check-circle"></i>
-                        <p></p>
-                    </div>
-                    
-                    <div class="benefit-item">
-                        <i class="fas fa-check-circle"></i>
-                        <p></p>
-                    </div>
-                </div>
-                
-                <!-- Observações -->
-                <div class="channel-notes">
-                    <i class="fas fa-info-circle"></i>
+                <!-- Cabeçalho -->
+                <div class="channel-content-header">
+                    <h1>Configurações do Messenger</h1>
                     <p></p>
                 </div>
-            </div>
-            
-            <!-- Passos de Conexão -->
-            <div class="connection-steps">
-                <h2>Como funciona</h2>
                 
-                <div class="step-item">
-                    <div class="step-number">1</div>
-                    <div class="step-content">
-                        <h3></h3>
-                        <p></p>
+                <!-- Página Conectada -->
+                <div class="form-section">
+                    <h2>Página Conectada</h2>
+                    
+                    <div class="connected-account-card">
+                        <div class="account-avatar">
+                            <img src="../../assets/images/integracoes/messenger-avatar.jpg" alt="">
+                        </div>
+                        <div class="account-info">
+                            <h3></h3>
+                            <p>@</p>
+                            <span class="status-badge verified">
+                                <i class="fas fa-check-circle"></i> Verificado
+                            </span>
+                        </div>
+                        <button class="btn-disconnect">
+                            <i class="fas fa-unlink"></i> Desconectar
+                        </button>
                     </div>
                 </div>
                 
-                <div class="step-item">
-                    <div class="step-number">2</div>
-                    <div class="step-content">
-                        <h3></h3>
-                        <p></p>
+                <!-- Configurações de Mensagens -->
+                <div class="form-section">
+                    <h2>Configurações de Mensagens</h2>
+                    
+                    <div class="settings-toggle-item">
+                        <div class="toggle-info">
+                            <h3>Resposta Automática</h3>
+                            <p></p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" checked>
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                    
+                    <div class="settings-toggle-item">
+                        <div class="toggle-info">
+                            <h3>Mensagem de Ausência</h3>
+                            <p></p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" checked>
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                    
+                    <div class="settings-toggle-item">
+                        <div class="toggle-info">
+                            <h3>Saudação Personalizada</h3>
+                            <p></p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" checked>
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                    
+                    <div class="settings-toggle-item">
+                        <div class="toggle-info">
+                            <h3>Menu Persistente</h3>
+                            <p></p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" checked>
+                            <span class="toggle-slider"></span>
+                        </label>
                     </div>
                 </div>
                 
-                <div class="step-item">
-                    <div class="step-number">3</div>
-                    <div class="step-content">
-                        <h3></h3>
-                        <p></p>
+                <!-- Horário de Atendimento -->
+                <div class="form-section">
+                    <h2>Horário de Atendimento</h2>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Horário de Início</label>
+                            <input type="time" value="09:00">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Horário de Fim</label>
+                            <input type="time" value="18:00">
+                        </div>
                     </div>
                 </div>
-            </div>
+                
+                <!-- Botões -->
+                <div class="form-actions">
+                    <button type="submit" class="btn-primary">
+                        <i class="fas fa-save"></i> Salvar Configurações
+                    </button>
+                </div>
+            </main>
         </div>
     </section>
 
