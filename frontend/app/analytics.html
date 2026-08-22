@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Header do App -->
+    <header class="app-header">
+        <div class="app-header-container">
+            <div class="app-logo">
+                <a href="dashboard.html"></a>
+            </div>
+            
+            <div class="app-header-actions">
+                <button class="app-notification-btn">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-count">3</span>
+                </button>
+                
+                <div class="app-user-menu">
+                    <button class="app-user-avatar">
+                        <img src="../../assets/images/usuarios/avatar.jpg" alt="">
+                        <span></span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="app-user-dropdown">
+                        <a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+                        <a href="../autenticacao/login.html"><i class="fas fa-sign-out-alt"></i> Sair</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <section class="app-main">
+        <div class="app-container">
+            
+            <!-- Sidebar -->
+            <aside class="app-sidebar">
+                <nav class="app-nav">
+                    <div class="app-nav-section">
+                        <h3>Principal</h3>
+                        <a href="dashboard.html">
+                            <i class="fas fa-dashboard"></i> Dashboard
+                        </a>
+                        <a href="automacoes.html">
+                            <i class="fas fa-robot"></i> Automações
+                        </a>
+                    </div>
+                    
+                    <div class="app-nav-section">
+                        <h3>Ferramentas</h3>
+                        <a href="analytics.html" class="active">
+                            <i class="fas fa-chart-bar"></i> Analytics
+                        </a>
+                        <a href="integracoes.html">
+                            <i class="fas fa-plug"></i> Integrações
+                        </a>
+                    </div>
+                </nav>
+            </aside>
+            
+            <!-- Conteúdo Principal -->
+            <main class="app-content">
+                
+                <!-- Cabeçalho -->
+                <div class="app-content-header">
+                    <div>
+                        <h1>Analytics</h1>
+                        <p></p>
+                    </div>
+                    <select class="analytics-period">
+                        <option value="7dias">Últimos 7 dias</option>
+                        <option value="30dias" selected>Últimos 30 dias</option>
+                        <option value="90dias">Últimos 90 dias</option>
+                    </select>
+                </div>
+                
+                <!-- Cards de Estatísticas -->
+                <div class="app-stats-grid">
+                    <div class="app-stat-card">
+                        <i class="fas fa-comments"></i>
+                        <div>
+                            <span class="app-stat-value"></span>
+                            <span class="app-stat-label">Total de Mensagens</span>
+                        </div>
+                    </div>
+                    
+                    <div class="app-stat-card">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <span class="app-stat-value">%</span>
+                            <span class="app-stat-label">Taxa de Entrega</span>
+                        </div>
+                    </div>
+                    
+                    <div class="app-stat-card">
+                        <i class="fas fa-reply"></i>
+                        <div>
+                            <span class="app-stat-value">%</span>
+                            <span class="app-stat-label">Taxa de Resposta</span>
+                        </div>
+                    </div>
+                    
+                    <div class="app-stat-card">
+                        <i class="fas fa-user-plus"></i>
+                        <div>
+                            <span class="app-stat-value"></span>
+                            <span class="app-stat-label">Novos Contatos</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Gráficos -->
+                <div class="analytics-charts-grid">
+                    <div class="analytics-chart-card">
+                        <div class="chart-header">
+                            <h3>Mensagens ao Longo do Tempo</h3>
+                        </div>
+                        <div class="chart-body">
+                            <div class="chart-placeholder">
+                                <i class="fas fa-chart-line"></i>
+                                <p>Gráfico</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="analytics-chart-card">
+                        <div class="chart-header">
+                            <h3>Distribuição de Mensagens</h3>
+                        </div>
+                        <div class="chart-body">
+                            <div class="chart-placeholder">
+                                <i class="fas fa-chart-pie"></i>
+                                <p>Gráfico</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Performance das Automações -->
+                <div class="automation-performance">
+                    <h2>Performance das Automações</h2>
+                    
+                    <table class="analytics-table">
+                        <thead>
+                            <tr>
+                                <th>Automação</th>
+                                <th>Mensagens</th>
+                                <th>Respostas</th>
+                                <th>Taxa de Resposta</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>%</td>
+                                <td><span class="status-badge active">Ativa</span></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>%</td>
+                                <td><span class="status-badge active">Ativa</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </main>
+        </div>
+    </section>
+
+    <script src="../../assets/js/script.js"></script>
+</body>
+</html>
