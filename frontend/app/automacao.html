@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Header do App -->
+    <header class="app-header">
+        <div class="app-header-container">
+            <div class="app-logo">
+                <a href="dashboard.html"></a>
+            </div>
+            
+            <div class="app-header-actions">
+                <button class="app-notification-btn">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-count">3</span>
+                </button>
+                
+                <div class="app-user-menu">
+                    <button class="app-user-avatar">
+                        <img src="../../assets/images/usuarios/avatar.jpg" alt="">
+                        <span></span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="app-user-dropdown">
+                        <a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+                        <a href="../autenticacao/login.html"><i class="fas fa-sign-out-alt"></i> Sair</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <section class="app-main">
+        <div class="app-container">
+            
+            <!-- Sidebar -->
+            <aside class="app-sidebar">
+                <nav class="app-nav">
+                    <div class="app-nav-section">
+                        <h3>Principal</h3>
+                        <a href="dashboard.html">
+                            <i class="fas fa-dashboard"></i> Dashboard
+                        </a>
+                        <a href="automacoes.html" class="active">
+                            <i class="fas fa-robot"></i> Automações
+                        </a>
+                    </div>
+                </nav>
+            </aside>
+            
+            <!-- Conteúdo Principal -->
+            <main class="app-content">
+                
+                <!-- Cabeçalho -->
+                <div class="app-content-header">
+                    <a href="automacoes.html" class="btn-back">
+                        <i class="fas fa-arrow-left"></i> Voltar
+                    </a>
+                    <h1>Detalhes da Automação</h1>
+                    <div class="automation-header-actions">
+                        <button class="btn-save"><i class="fas fa-save"></i> Salvar</button>
+                    </div>
+                </div>
+                
+                <!-- Nome da Automação -->
+                <div class="automation-name-section">
+                    <label>Nome da Automação</label>
+                    <input type="text" placeholder="">
+                </div>
+                
+                <!-- Fluxo da Automação -->
+                <div class="automation-flow">
+                    <h2>Fluxo da Automação</h2>
+                    
+                    <!-- Gatilho -->
+                    <div class="flow-trigger">
+                        <div class="flow-icon trigger">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div class="flow-content">
+                            <h3>Gatilho</h3>
+                            <select>
+                                <option value="">Selecione o gatilho...</option>
+                                <option value="nova-mensagem">Nova Mensagem</option>
+                                <option value="novo-contato">Novo Contato</option>
+                                <option value="palavra-chave">Palavra-chave</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <!-- Ação 1 -->
+                    <div class="flow-action">
+                        <div class="flow-icon action">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="flow-content">
+                            <h3>Ação 1</h3>
+                            <select>
+                                <option value="">Selecione a ação...</option>
+                                <option value="enviar-mensagem">Enviar Mensagem</option>
+                                <option value="adicionar-tag">Adicionar Tag</option>
+                                <option value="notificar">Notificar</option>
+                            </select>
+                            <textarea placeholder="Conteúdo da mensagem..."></textarea>
+                        </div>
+                    </div>
+                    
+                    <!-- Condição -->
+                    <div class="flow-condition">
+                        <div class="flow-icon condition">
+                            <i class="fas fa-code-branch"></i>
+                        </div>
+                        <div class="flow-content">
+                            <h3>Condição</h3>
+                            <select>
+                                <option value="">Selecione a condição...</option>
+                                <option value="resposta-sim">Resposta Sim</option>
+                                <option value="resposta-nao">Resposta Não</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <!-- Ação 2 -->
+                    <div class="flow-action">
+                        <div class="flow-icon action">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="flow-content">
+                            <h3>Ação 2</h3>
+                            <select>
+                                <option value="">Selecione a ação...</option>
+                                <option value="enviar-mensagem">Enviar Mensagem</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <!-- Adicionar Etapa -->
+                    <button class="btn-add-step">
+                        <i class="fas fa-plus"></i> Adicionar Etapa
+                    </button>
+                </div>
+            </main>
+        </div>
+    </section>
+
+    <script src="../../assets/js/script.js"></script>
+</body>
+</html>
