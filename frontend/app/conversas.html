@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Header do App -->
+    <header class="app-header">
+        <div class="app-header-container">
+            <div class="app-logo">
+                <a href="dashboard.html"></a>
+            </div>
+            
+            <div class="app-header-actions">
+                <button class="app-search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+                
+                <button class="app-notification-btn">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-count">3</span>
+                </button>
+                
+                <div class="app-user-menu">
+                    <button class="app-user-avatar">
+                        <img src="../../assets/images/usuarios/avatar.jpg" alt="">
+                        <span></span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="app-user-dropdown">
+                        <a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+                        <a href="perfil.html"><i class="fas fa-user"></i> Perfil</a>
+                        <a href="../autenticacao/login.html"><i class="fas fa-sign-out-alt"></i> Sair</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <section class="app-main">
+        <div class="app-container">
+            
+            <!-- Sidebar -->
+            <aside class="app-sidebar">
+                <nav class="app-nav">
+                    <div class="app-nav-section">
+                        <h3>Principal</h3>
+                        <a href="dashboard.html">
+                            <i class="fas fa-dashboard"></i> Dashboard
+                        </a>
+                        <a href="automacoes.html">
+                            <i class="fas fa-robot"></i> Automações
+                        </a>
+                        <a href="contatos.html">
+                            <i class="fas fa-users"></i> Contatos
+                        </a>
+                        <a href="conversas.html" class="active">
+                            <i class="fas fa-comments"></i> Conversas
+                        </a>
+                    </div>
+                </nav>
+            </aside>
+            
+            <!-- Conteúdo Principal -->
+            <main class="app-content">
+                
+                <!-- Cabeçalho -->
+                <div class="app-content-header">
+                    <div>
+                        <h1>Conversas</h1>
+                        <p></p>
+                    </div>
+                </div>
+                
+                <!-- Filtros -->
+                <div class="app-filters">
+                    <button class="conversation-filter active">Todas</button>
+                    <button class="conversation-filter">Não Lidas</button>
+                    <button class="conversation-filter">Automatizadas</button>
+                    <button class="conversation-filter">Manuais</button>
+                </div>
+                
+                <!-- Lista de Conversas -->
+                <div class="conversations-list">
+                    
+                    <!-- Conversa 1 -->
+                    <div class="conversation-card unread">
+                        <div class="conversation-avatar">
+                            <img src="../../assets/images/contatos/contato1.jpg" alt="">
+                            <span class="online-dot"></span>
+                        </div>
+                        <div class="conversation-info">
+                            <div class="conversation-header">
+                                <h3></h3>
+                                <span class="conversation-time"></span>
+                            </div>
+                            <p class="conversation-preview"></p>
+                        </div>
+                        <span class="unread-badge"></span>
+                    </div>
+                    
+                    <!-- Conversa 2 -->
+                    <div class="conversation-card unread">
+                        <div class="conversation-avatar">
+                            <img src="../../assets/images/contatos/contato2.jpg" alt="">
+                            <span class="online-dot"></span>
+                        </div>
+                        <div class="conversation-info">
+                            <div class="conversation-header">
+                                <h3></h3>
+                                <span class="conversation-time"></span>
+                            </div>
+                            <p class="conversation-preview"></p>
+                        </div>
+                        <span class="unread-badge"></span>
+                    </div>
+                    
+                    <!-- Conversa 3 -->
+                    <div class="conversation-card">
+                        <div class="conversation-avatar">
+                            <img src="../../assets/images/contatos/contato3.jpg" alt="">
+                        </div>
+                        <div class="conversation-info">
+                            <div class="conversation-header">
+                                <h3></h3>
+                                <span class="conversation-time"></span>
+                            </div>
+                            <p class="conversation-preview"></p>
+                        </div>
+                    </div>
+                    
+                    <!-- Conversa 4 -->
+                    <div class="conversation-card">
+                        <div class="conversation-avatar">
+                            <img src="../../assets/images/contatos/contato4.jpg" alt="">
+                        </div>
+                        <div class="conversation-info">
+                            <div class="conversation-header">
+                                <h3></h3>
+                                <span class="conversation-time"></span>
+                            </div>
+                            <p class="conversation-preview"></p>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </section>
+
+    <script src="../../assets/js/script.js"></script>
+</body>
+</html>
