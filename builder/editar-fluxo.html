@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title></title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Header do Builder -->
+    <header class="builder-header">
+        <div class="builder-header-container">
+            <div class="builder-logo">
+                <a href="index.html">
+                    <i class="fas fa-cubes"></i>
+                    <span>Builder</span>
+                </a>
+            </div>
+            
+            <div class="builder-header-actions">
+                <button class="btn-undo"><i class="fas fa-undo"></i></button>
+                <button class="btn-redo"><i class="fas fa-redo"></i></button>
+                <span class="builder-divider"></span>
+                <a href="preview.html" class="btn-preview-flow"><i class="fas fa-eye"></i> Preview</a>
+                <button class="btn-save-flow"><i class="fas fa-save"></i> Salvar</button>
+                <button class="btn-publish"><i class="fas fa-rocket"></i> Publicar</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <section class="flow-builder-main">
+        <div class="flow-builder-container">
+            
+            <!-- Sidebar de Blocos -->
+            <aside class="flow-sidebar">
+                <div class="flow-sidebar-header">
+                    <h3>Blocos</h3>
+                </div>
+                
+                <div class="flow-blocks">
+                    <div class="block-category">
+                        <h4>Gatilhos</h4>
+                        <div class="flow-block trigger" draggable="true">
+                            <i class="fas fa-bolt"></i>
+                            <div>
+                                <strong>Iniciar</strong>
+                            </div>
+                        </div>
+                        <div class="flow-block trigger" draggable="true">
+                            <i class="fas fa-comment"></i>
+                            <div>
+                                <strong>Nova Mensagem</strong>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="block-category">
+                        <h4>Ações</h4>
+                        <div class="flow-block action" draggable="true">
+                            <i class="fas fa-paper-plane"></i>
+                            <div>
+                                <strong>Enviar Mensagem</strong>
+                            </div>
+                        </div>
+                        <div class="flow-block action" draggable="true">
+                            <i class="fas fa-tag"></i>
+                            <div>
+                                <strong>Adicionar Tag</strong>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="block-category">
+                        <h4>Condições</h4>
+                        <div class="flow-block condition" draggable="true">
+                            <i class="fas fa-code-branch"></i>
+                            <div>
+                                <strong>Se/Então</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+            
+            <!-- Área do Fluxo Existente -->
+            <main class="flow-canvas">
+                <div class="flow-canvas-header">
+                    <input type="text" class="flow-name-input" value="">
+                    <span class="flow-status-badge active">Ativo</span>
+                </div>
+                
+                <div class="flow-canvas-area">
+                    <!-- Fluxo Existente -->
+                    <div class="flow-node trigger-node">
+                        <div class="node-header">
+                            <i class="fas fa-bolt"></i>
+                            <span>Iniciar</span>
+                        </div>
+                        <div class="node-body">
+                            <p></p>
+                        </div>
+                    </div>
+                    
+                    <div class="flow-connector-line"></div>
+                    
+                    <div class="flow-node action-node">
+                        <div class="node-header">
+                            <i class="fas fa-paper-plane"></i>
+                            <span>Enviar Mensagem</span>
+                        </div>
+                        <div class="node-body">
+                            <p></p>
+                        </div>
+                    </div>
+                    
+                    <div class="flow-connector-line"></div>
+                    
+                    <div class="flow-node condition-node">
+                        <div class="node-header">
+                            <i class="fas fa-code-branch"></i>
+                            <span>Condição</span>
+                        </div>
+                        <div class="node-body">
+                            <p></p>
+                        </div>
+                    </div>
+                    
+                    <div class="flow-connector-line"></div>
+                    
+                    <div class="flow-node action-node">
+                        <div class="node-header">
+                            <i class="fas fa-tag"></i>
+                            <span>Adicionar Tag</span>
+                        </div>
+                        <div class="node-body">
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            
+            <!-- Painel de Configuração -->
+            <aside class="flow-properties">
+                <div class="properties-header">
+                    <h3>Configuração</h3>
+                </div>
+                
+                <div class="properties-content">
+                    <div class="property-group">
+                        <label>Nome do Fluxo</label>
+                        <input type="text" value="">
+                    </div>
+                    
+                    <div class="property-group">
+                        <label>Status</label>
+                        <select>
+                            <option value="ativo" selected>Ativo</option>
+                            <option value="pausado">Pausado</option>
+                        </select>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="builder-footer">
+        <div class="builder-footer-container">
+            <span>Última edição: </span>
+            <div class="builder-footer-actions">
+                <button class="btn-save-draft"><i class="fas fa-save"></i> Salvar</button>
+                <button class="btn-publish-footer"><i class="fas fa-rocket"></i> Publicar</button>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>
