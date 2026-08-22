@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Header do Builder -->
+    <header class="builder-header">
+        <div class="builder-header-container">
+            <div class="builder-logo">
+                <a href="../index.html">
+                    <i class="fas fa-cubes"></i>
+                    <span>Builder</span>
+                </a>
+            </div>
+            
+            <div class="builder-header-actions">
+                <a href="../editar-fluxo.html" class="btn-back-flow">
+                    <i class="fas fa-arrow-left"></i> Voltar ao Fluxo
+                </a>
+                <button class="btn-save-block"><i class="fas fa-save"></i> Salvar Bloco</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <section class="block-editor-main">
+        <div class="block-editor-container">
+            
+            <!-- Cabeçalho -->
+            <div class="block-editor-header">
+                <div class="block-icon condition">
+                    <i class="fas fa-code-branch"></i>
+                </div>
+                <h1>Configurar Condição</h1>
+                <p></p>
+            </div>
+            
+            <!-- Tipo de Condição -->
+            <div class="form-section">
+                <h2>Tipo de Condição</h2>
+                
+                <div class="condition-type-options">
+                    <label class="condition-type-card">
+                        <input type="radio" name="tipo-condicao" value="resposta" checked>
+                        <i class="fas fa-comment"></i>
+                        <h3>Resposta do Usuário</h3>
+                    </label>
+                    
+                    <label class="condition-type-card">
+                        <input type="radio" name="tipo-condicao" value="campo">
+                        <i class="fas fa-database"></i>
+                        <h3>Campo Personalizado</h3>
+                    </label>
+                    
+                    <label class="condition-type-card">
+                        <input type="radio" name="tipo-condicao" value="tag">
+                        <i class="fas fa-tag"></i>
+                        <h3>Tag do Contato</h3>
+                    </label>
+                </div>
+            </div>
+            
+            <!-- Configuração da Condição -->
+            <div class="form-section">
+                <h2>Configuração</h2>
+                
+                <div class="condition-builder">
+                    <div class="condition-row">
+                        <select class="condition-field">
+                            <option value="">Selecione o campo...</option>
+                            <option value="resposta">Resposta</option>
+                            <option value="nome">Nome</option>
+                            <option value="email">E-mail</option>
+                        </select>
+                        
+                        <select class="condition-operator">
+                            <option value="igual">É igual a</option>
+                            <option value="diferente">É diferente de</option>
+                            <option value="contem">Contém</option>
+                            <option value="nao-contem">Não contém</option>
+                            <option value="vazio">Está vazio</option>
+                        </select>
+                        
+                        <input type="text" class="condition-value" placeholder="Valor">
+                    </div>
+                    
+                    <button class="btn-add-condition">
+                        <i class="fas fa-plus"></i> Adicionar Condição
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Ações da Condição -->
+            <div class="form-section">
+                <h2>Ações</h2>
+                
+                <div class="condition-actions">
+                    <div class="condition-action-item">
+                        <h3>Se Verdadeiro</h3>
+                        <select>
+                            <option value="">Selecione a ação...</option>
+                            <option value="enviar-mensagem">Enviar Mensagem</option>
+                            <option value="adicionar-tag">Adicionar Tag</option>
+                            <option value="notificar">Notificar</option>
+                        </select>
+                    </div>
+                    
+                    <div class="condition-action-item">
+                        <h3>Se Falso</h3>
+                        <select>
+                            <option value="">Selecione a ação...</option>
+                            <option value="enviar-mensagem">Enviar Mensagem</option>
+                            <option value="adicionar-tag">Adicionar Tag</option>
+                            <option value="notificar">Notificar</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Preview -->
+            <div class="form-section">
+                <h2>Resumo da Condição</h2>
+                
+                <div class="condition-summary">
+                    <p>SE <strong>[campo]</strong> <strong>[operador]</strong> <strong>[valor]</strong></p>
+                    <p>ENTÃO <strong>[ação verdadeira]</strong></p>
+                    <p>SENÃO <strong>[ação falsa]</strong></p>
+                </div>
+            </div>
+            
+            <!-- Botões -->
+            <div class="form-actions">
+                <button type="submit" class="btn-primary">
+                    <i class="fas fa-save"></i> Salvar Condição
+                </button>
+                
+                <a href="../editar-fluxo.html" class="btn-cancel">
+                    <i class="fas fa-times"></i> Cancelar
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script src="../../assets/js/script.js"></script>
+</body>
+</html>
