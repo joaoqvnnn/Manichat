@@ -1,0 +1,306 @@
+// Script do Webchat
+// Este arquivo contém o código JavaScript para integração do webchat
+
+class Webchat {
+    constructor(config) {
+        this.config = {
+            nome: config.nome || '',
+            corPrincipal: config.corPrincipal || '#2196F3',
+            corTexto: config.corTexto || '#FFFFFF',
+            corBalaoBot: config.corBalaoBot || '#E0E0E0',
+            corBalaoUsuario: config.corBalaoUsuario || '#2196F3',
+            posicao: config.posicao || 'direita',
+            avatar: config.avatar || '',
+            titulo: config.titulo || '',
+            boasVindas: config.boasVindas || '',
+            placeholder: config.placeholder || 'Digite sua mensagem...',
+            fluxoId: config.fluxoId || '',
+            apiUrl: config.apiUrl || 'https://api.seusite.com/v1/webchat'
+        };
+        
+        this.iniciarWebchat();
+    }
+    
+    // Iniciar o webchat
+    iniciarWebchat() {
+        this.criarBotao();
+        this.criarJanela();
+        this.adicionarEventos();
+    }
+    
+    // Criar botão do chat
+    criarBotao() {
+        const botao = document.createElement('button');
+        botao.id = 'webchat-button';
+        botao.className = 'webchat-button';
+        botao.style.backgroundColor = this.config.corPrincipal;
+        botao.style.color = this.config.corTexto;
+        botao.style.position = 'fixed';
+        botao.style.bottom = '20px';
+        botao.style[this.config.posicao] = '20px';
+        botao.style.width = '60px';
+        botao.style.height = '60px';
+        botao.style.borderRadius = '50%';
+        botao.style.border = 'none';
+        botao.style.cursor = 'pointer';
+        botao.style.zIndex = '9999';
+        botao.style.display = 'flex';
+        botao.style.alignItems = 'center';
+        botao.style.justifyContent = 'center';
+        botao.style.boxShadow = '0 4px 12px rgba(0,0,0,0.2)';
+        botao.innerHTML = '<i class="fas fa-comments" style="font-size: 24px;"></i>';
+        
+        document.body.appendChild(botao);
+    }
+    
+    // Criar janela do chat
+    criarJanela() {
+        const janela = document.createElement('div');
+        janela.id = 'webchat-window';
+        janela.className = 'webchat-window';
+        janela.style.position = 'fixed';
+        janela.style.bottom = '90px';
+        janela.style[this.config.posicao] = '20px';
+        janela.style.width = '360px';
+        janela.style.height = '500px';
+        janela.style.backgroundColor = '#FFFFFF';
+        janela.style.borderRadius = '12px';
+        janela.style.boxShadow = '0 8px 24px rgba(0,0,0,0.2)';
+        janela.style.display = 'none';
+        janela.style.flexDirection = 'column';
+        janela.style.overflow = 'hidden';
+        janela.style.zIndex = '9999';
+        
+        // Header
+        const header = document.createElement('div');
+        header.style.backgroundColor = this.config.corPrincipal;
+        header.style.color = this.config.corTexto;
+        header.style.padding = '16px';
+        header.style.display = 'flex';
+        header.style.alignItems = 'center';
+        header.style.gap = '12px';
+        
+        if (this.config.avatar) {
+            const avatar = document.createElement('img');
+            avatar.src = this.config.avatar;
+            avatar.style.width = '40px';
+            avatar.style.height = '40px';
+            avatar.style.borderRadius = '50%';
+            header.appendChild(avatar);
+        }
+        
+        const info = document.createElement('div');
+        info.style.flex = '1';
+        info.innerHTML = `
+            <h3 style="margin: 0; font-size: 16px;">${this.config.titulo}</h3>
+            <span style="font-size: 12px; opacity: 0.8;">Online</span>
+        `;
+        header.appendChild(info);
+        
+        const btnFechar = document.createElement('button');
+        btnFechar.innerHTML = '<i class="fas fa-times"></i>';
+        btnFechar.style.backgroundColor = 'transparent';
+        btnFechar.style.border = 'none';
+        btnFechar.style.color = this.config.corTexto;
+        btnFechar.style.cursor = 'pointer';
+        btnFechar.style.fontSize = '18px';
+        btnFechar.onclick = () => this.fecharChat();
+        header.appendChild(btnFechar);
+        
+        janela.appendChild(header);
+        
+        // Área de mensagens
+        this.areaMensagens = document.createElement('div');
+        this.areaMensagens.style.flex = '1';
+        this.areaMensagens.style.padding = '16px';
+        this.areaMensagens.style.overflowY = 'auto';
+        this.areaMensagens.style.backgroundColor = '#F5F5F5';
+        janela.appendChild(this.areaMensagens);
+        
+        // Input
+        const inputArea = document.createElement('div');
+        inputArea.style.padding = '12px';
+        inputArea.style.borderTop = '1px solid #E0E0E0';
+        inputArea.style.display = 'flex';
+        inputArea.style.gap = '8px';
+        
+        const input = document.createElement('input');
+        input.type = 'text';
+        input.placeholder = this.config.placeholder;
+        input.style.flex = '1';
+        input.style.padding = '10px';
+        input.style.border = '1px solid #E0E0E0';
+        input.style.borderRadius = '20px';
+        input.style.outline = 'none';
+        input.id = 'webchat-input';
+        
+        const btnEnviar = document.createElement('button');
+        btnEnviar.innerHTML = '<i class="fas fa-paper-plane"></i>';
+        btnEnviar.style.backgroundColor = this.config.corPrincipal;
+        btnEnviar.style.color = this.config.corTexto;
+        btnEnviar.style.border = 'none';
+        btnEnviar.style.borderRadius = '50%';
+        btnEnviar.style.width = '40px';
+        btnEnviar.style.height = '40px';
+        btnEnviar.style.cursor = 'pointer';
+        btnEnviar.onclick = () => this.enviarMensagem();
+        
+        inputArea.appendChild(input);
+        inputArea.appendChild(btnEnviar);
+        janela.appendChild(inputArea);
+        
+        document.body.appendChild(janela);
+    }
+    
+    // Adicionar eventos
+    adicionarEventos() {
+        const botao = document.getElementById('webchat-button');
+        const input = document.getElementById('webchat-input');
+        
+        botao.addEventListener('click', () => this.abrirChat());
+        
+        input.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                this.enviarMensagem();
+            }
+        });
+    }
+    
+    // Abrir chat
+    abrirChat() {
+        const janela = document.getElementById('webchat-window');
+        const botao = document.getElementById('webchat-button');
+        
+        janela.style.display = 'flex';
+        botao.style.display = 'none';
+        
+        // Enviar mensagem de boas-vindas se não houver mensagens
+        if (this.areaMensagens.children.length === 0) {
+            this.adicionarMensagemBot(this.config.boasVindas);
+        }
+    }
+    
+    // Fechar chat
+    fecharChat() {
+        const janela = document.getElementById('webchat-window');
+        const botao = document.getElementById('webchat-button');
+        
+        janela.style.display = 'none';
+        botao.style.display = 'flex';
+    }
+    
+    // Enviar mensagem
+    async enviarMensagem() {
+        const input = document.getElementById('webchat-input');
+        const texto = input.value.trim();
+        
+        if (!texto) return;
+        
+        this.adicionarMensagemUsuario(texto);
+        input.value = '';
+        
+        // Enviar para API
+        await this.enviarParaAPI(texto);
+    }
+    
+    // Adicionar mensagem do usuário
+    adicionarMensagemUsuario(texto) {
+        const msgDiv = document.createElement('div');
+        msgDiv.style.display = 'flex';
+        msgDiv.style.justifyContent = 'flex-end';
+        msgDiv.style.marginBottom = '12px';
+        
+        const balao = document.createElement('div');
+        balao.style.backgroundColor = this.config.corBalaoUsuario;
+        balao.style.color = '#FFFFFF';
+        balao.style.padding = '10px 16px';
+        balao.style.borderRadius = '18px 18px 4px 18px';
+        balao.style.maxWidth = '80%';
+        balao.textContent = texto;
+        
+        msgDiv.appendChild(balao);
+        this.areaMensagens.appendChild(msgDiv);
+        this.areaMensagens.scrollTop = this.areaMensagens.scrollHeight;
+    }
+    
+    // Adicionar mensagem do bot
+    adicionarMensagemBot(texto) {
+        const msgDiv = document.createElement('div');
+        msgDiv.style.display = 'flex';
+        msgDiv.style.justifyContent = 'flex-start';
+        msgDiv.style.marginBottom = '12px';
+        
+        const balao = document.createElement('div');
+        balao.style.backgroundColor = this.config.corBalaoBot;
+        balao.style.color = '#333333';
+        balao.style.padding = '10px 16px';
+        balao.style.borderRadius = '18px 18px 18px 4px';
+        balao.style.maxWidth = '80%';
+        balao.textContent = texto;
+        
+        msgDiv.appendChild(balao);
+        this.areaMensagens.appendChild(msgDiv);
+        this.areaMensagens.scrollTop = this.areaMensagens.scrollHeight;
+    }
+    
+    // Enviar mensagem para API
+    async enviarParaAPI(texto) {
+        try {
+            const response = await fetch(`${this.config.apiUrl}/message`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    fluxoId: this.config.fluxoId,
+                    mensagem: texto,
+                    sessionId: this.obterSessionId()
+                })
+            });
+            
+            const data = await response.json();
+            
+            if (data.resposta) {
+                this.adicionarMensagemBot(data.resposta);
+            }
+        } catch (error) {
+            console.error('Erro ao enviar mensagem:', error);
+            this.adicionarMensagemBot('Desculpe, ocorreu um erro. Tente novamente.');
+        }
+    }
+    
+    // Obter session ID
+    obterSessionId() {
+        let sessionId = localStorage.getItem('webchat_session_id');
+        
+        if (!sessionId) {
+            sessionId = this.gerarSessionId();
+            localStorage.setItem('webchat_session_id', sessionId);
+        }
+        
+        return sessionId;
+    }
+    
+    // Gerar session ID
+    gerarSessionId() {
+        return 'session_' + Date.now() + '_' + Math.random().toString(36).substring(7);
+    }
+}
+
+// Inicializar o webchat
+document.addEventListener('DOMContentLoaded', () => {
+    const webchat = new Webchat({
+        nome: '',
+        corPrincipal: '#2196F3',
+        corTexto: '#FFFFFF',
+        corBalaoBot: '#E0E0E0',
+        corBalaoUsuario: '#2196F3',
+        posicao: 'direita',
+        avatar: '',
+        titulo: '',
+        boasVindas: '',
+        placeholder: 'Digite sua mensagem...',
+        fluxoId: '',
+        apiUrl: 'https://api.seusite.com/v1/webchat'
+    });
+});
