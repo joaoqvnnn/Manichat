@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Header do App -->
+    <header class="app-header">
+        <div class="app-header-container">
+            <div class="app-logo">
+                <a href="../app/dashboard.html"></a>
+            </div>
+            
+            <div class="app-header-actions">
+                <button class="app-notification-btn">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-count">3</span>
+                </button>
+                
+                <div class="app-user-menu">
+                    <button class="app-user-avatar">
+                        <img src="../../assets/images/usuarios/avatar.jpg" alt="">
+                        <span></span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="app-user-dropdown">
+                        <a href="../app/dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+                        <a href="../autenticacao/login.html"><i class="fas fa-sign-out-alt"></i> Sair</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <section class="channel-settings-main">
+        <div class="channel-settings-container">
+            
+            <!-- Sidebar do Canal -->
+            <aside class="channel-sidebar">
+                <div class="channel-sidebar-header">
+                    <div class="channel-icon email">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>E-mail</h3>
+                    <span class="status-badge connected">Conectado</span>
+                </div>
+                
+                <nav class="channel-nav">
+                    <a href="configuracoes.html" class="active">
+                        <i class="fas fa-cog"></i> Configurações
+                    </a>
+                    <a href="templates.html">
+                        <i class="fas fa-file-alt"></i> Templates
+                    </a>
+                    <a href="campanhas.html">
+                        <i class="fas fa-bullhorn"></i> Campanhas
+                    </a>
+                    <a href="contatos.html">
+                        <i class="fas fa-users"></i> Contatos
+                    </a>
+                    <a href="automacoes.html">
+                        <i class="fas fa-robot"></i> Automações
+                    </a>
+                </nav>
+            </aside>
+            
+            <!-- Conteúdo Principal -->
+            <main class="channel-content">
+                
+                <!-- Cabeçalho -->
+                <div class="channel-content-header">
+                    <h1>Configurações do E-mail</h1>
+                    <p></p>
+                </div>
+                
+                <!-- Conta Conectada -->
+                <div class="form-section">
+                    <h2>Conta Conectada</h2>
+                    
+                    <div class="connected-account-card">
+                        <div class="account-avatar">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="account-info">
+                            <h3></h3>
+                            <p></p>
+                            <span class="status-badge verified">
+                                <i class="fas fa-check-circle"></i> Verificado
+                            </span>
+                        </div>
+                        <button class="btn-disconnect">
+                            <i class="fas fa-unlink"></i> Desconectar
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Remetente -->
+                <div class="form-section">
+                    <h2>Remetente</h2>
+                    
+                    <div class="form-group">
+                        <label for="email-nome">Nome do Remetente *</label>
+                        <input type="text" id="email-nome" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email-endereco">E-mail do Remetente *</label>
+                        <input type="email" id="email-endereco" required>
+                    </div>
+                </div>
+                
+                <!-- Configurações de Envio -->
+                <div class="form-section">
+                    <h2>Configurações de Envio</h2>
+                    
+                    <div class="settings-toggle-item">
+                        <div class="toggle-info">
+                            <h3>Rastrear aberturas</h3>
+                            <p></p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" checked>
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                    
+                    <div class="settings-toggle-item">
+                        <div class="toggle-info">
+                            <h3>Rastrear cliques</h3>
+                            <p></p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" checked>
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                    
+                    <div class="settings-toggle-item">
+                        <div class="toggle-info">
+                            <h3>Incluir link de descadastro</h3>
+                            <p></p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" checked>
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                </div>
+                
+                <!-- Assinatura -->
+                <div class="form-section">
+                    <h2>Assinatura</h2>
+                    
+                    <div class="form-group">
+                        <label>Assinatura do E-mail</label>
+                        <textarea rows="4" placeholder=""></textarea>
+                    </div>
+                </div>
+                
+                <!-- Botões -->
+                <div class="form-actions">
+                    <button type="submit" class="btn-primary">
+                        <i class="fas fa-save"></i> Salvar Configurações
+                    </button>
+                </div>
+            </main>
+        </div>
+    </section>
+
+    <script src="../../assets/js/script.js"></script>
+</body>
+</html>
