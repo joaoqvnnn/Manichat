@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Header do App -->
+    <header class="app-header">
+        <div class="app-header-container">
+            <div class="app-logo">
+                <a href="../app/dashboard.html"></a>
+            </div>
+            
+            <div class="app-header-actions">
+                <button class="app-notification-btn">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-count">3</span>
+                </button>
+                
+                <div class="app-user-menu">
+                    <button class="app-user-avatar">
+                        <img src="../../assets/images/usuarios/avatar.jpg" alt="">
+                        <span></span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="app-user-dropdown">
+                        <a href="../app/dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+                        <a href="../autenticacao/login.html"><i class="fas fa-sign-out-alt"></i> Sair</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <section class="channel-comments-main">
+        <div class="channel-comments-container">
+            
+            <!-- Sidebar do Canal -->
+            <aside class="channel-sidebar">
+                <div class="channel-sidebar-header">
+                    <div class="channel-icon instagram">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <h3>Instagram</h3>
+                    <span class="status-badge connected">Conectado</span>
+                </div>
+                
+                <nav class="channel-nav">
+                    <a href="configuracoes.html">
+                        <i class="fas fa-cog"></i> Configurações
+                    </a>
+                    <a href="mensagens.html">
+                        <i class="fas fa-comments"></i> Mensagens
+                    </a>
+                    <a href="comentarios.html" class="active">
+                        <i class="fas fa-comment-dots"></i> Comentários
+                    </a>
+                    <a href="stories.html">
+                        <i class="fas fa-book-open"></i> Stories
+                    </a>
+                </nav>
+            </aside>
+            
+            <!-- Conteúdo Principal -->
+            <main class="channel-content">
+                
+                <!-- Cabeçalho -->
+                <div class="channel-content-header">
+                    <div>
+                        <h1>Comentários</h1>
+                        <p></p>
+                    </div>
+                </div>
+                
+                <!-- Filtros -->
+                <div class="app-filters">
+                    <button class="comment-filter active">Todos</button>
+                    <button class="comment-filter">Não Respondidos</button>
+                    <button class="comment-filter">Respondidos</button>
+                    <button class="comment-filter">Automatizados</button>
+                </div>
+                
+                <!-- Lista de Comentários -->
+                <div class="comments-list">
+                    
+                    <!-- Comentário 1 -->
+                    <div class="comment-card">
+                        <div class="comment-post-image">
+                            <img src="../../assets/images/posts/post1.jpg" alt="">
+                        </div>
+                        <div class="comment-content">
+                            <div class="comment-user">
+                                <img src="../../assets/images/contatos/contato1.jpg" alt="">
+                                <div>
+                                    <h3></h3>
+                                    <span></span>
+                                </div>
+                            </div>
+                            <p class="comment-text"></p>
+                            <div class="comment-actions">
+                                <button class="btn-reply-comment">
+                                    <i class="fas fa-reply"></i> Responder
+                                </button>
+                                <button class="btn-auto-reply">
+                                    <i class="fas fa-robot"></i> Resposta Automática
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Comentário 2 -->
+                    <div class="comment-card">
+                        <div class="comment-post-image">
+                            <img src="../../assets/images/posts/post2.jpg" alt="">
+                        </div>
+                        <div class="comment-content">
+                            <div class="comment-user">
+                                <img src="../../assets/images/contatos/contato2.jpg" alt="">
+                                <div>
+                                    <h3></h3>
+                                    <span></span>
+                                </div>
+                            </div>
+                            <p class="comment-text"></p>
+                            <div class="comment-actions">
+                                <button class="btn-reply-comment">
+                                    <i class="fas fa-reply"></i> Responder
+                                </button>
+                                <button class="btn-auto-reply">
+                                    <i class="fas fa-robot"></i> Resposta Automática
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Comentário 3 - Respondido -->
+                    <div class="comment-card responded">
+                        <div class="comment-post-image">
+                            <img src="../../assets/images/posts/post3.jpg" alt="">
+                        </div>
+                        <div class="comment-content">
+                            <div class="comment-user">
+                                <img src="../../assets/images/contatos/contato3.jpg" alt="">
+                                <div>
+                                    <h3></h3>
+                                    <span></span>
+                                </div>
+                            </div>
+                            <p class="comment-text"></p>
+                            <div class="comment-reply-preview">
+                                <span><i class="fas fa-robot"></i> Resposta automática:</span>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Configurações de Automação -->
+                <div class="comment-automation-settings">
+                    <h2>Automação de Comentários</h2>
+                    
+                    <div class="settings-toggle-item">
+                        <div class="toggle-info">
+                            <h3>Responder comentários automaticamente</h3>
+                            <p></p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" checked>
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                    
+                    <div class="settings-toggle-item">
+                        <div class="toggle-info">
+                            <h3>Responder apenas comentários com palavras-chave</h3>
+                            <p></p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox">
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </section>
+
+    <script src="../../assets/js/script.js"></script>
+</body>
+</html>
