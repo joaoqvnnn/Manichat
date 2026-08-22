@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="auth-body">
+    <!-- Header Simplificado -->
+    <header class="auth-header">
+        <div class="auth-header-container">
+            <div class="logo">
+                <a href="../home/index.html"></a>
+            </div>
+            <a href="../home/index.html" class="btn-back-home">
+                <i class="fas fa-arrow-left"></i> Voltar ao Site
+            </a>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <section class="auth-main">
+        <div class="verification-container">
+            <div class="verification-box">
+                
+                <!-- Ícone -->
+                <div class="verification-icon 2fa-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                
+                <!-- Título -->
+                <h1>Autenticação em Dois Fatores</h1>
+                <p class="verification-description"></p>
+                
+                <!-- Método de Verificação -->
+                <div class="2fa-method">
+                    <div class="method-selected">
+                        <i class="fas fa-mobile-alt"></i>
+                        <div>
+                            <h3>Aplicativo Autenticador</h3>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Campo de Código -->
+                <div class="code-verification">
+                    <label for="codigo-2fa">Digite o código de 6 dígitos</label>
+                    
+                    <div class="code-inputs">
+                        <input type="text" maxlength="1" class="code-input" inputmode="numeric" pattern="[0-9]">
+                        <input type="text" maxlength="1" class="code-input" inputmode="numeric" pattern="[0-9]">
+                        <input type="text" maxlength="1" class="code-input" inputmode="numeric" pattern="[0-9]">
+                        <input type="text" maxlength="1" class="code-input" inputmode="numeric" pattern="[0-9]">
+                        <input type="text" maxlength="1" class="code-input" inputmode="numeric" pattern="[0-9]">
+                        <input type="text" maxlength="1" class="code-input" inputmode="numeric" pattern="[0-9]">
+                    </div>
+                    
+                    <p class="code-hint"></p>
+                </div>
+                
+                <!-- Botão de Verificação -->
+                <button class="btn-verify-code" id="btn-verify-2fa">
+                    <i class="fas fa-check-circle"></i> Verificar e Entrar
+                </button>
+                
+                <!-- Timer do Código -->
+                <div class="code-timer">
+                    <i class="fas fa-clock"></i>
+                    <span>O código expira em <strong id="2fa-timer-countdown">30</strong> segundos</span>
+                </div>
+                
+                <!-- Métodos Alternativos -->
+                <div class="alternative-methods">
+                    <p>Problemas com o código?</p>
+                    
+                    <div class="alternative-options">
+                        <button class="btn-alternative" id="btn-2fa-sms">
+                            <i class="fas fa-sms"></i>
+                            Enviar por SMS
+                        </button>
+                        
+                        <button class="btn-alternative" id="btn-2fa-email">
+                            <i class="fas fa-envelope"></i>
+                            Enviar por E-mail
+                        </button>
+                        
+                        <button class="btn-alternative" id="btn-2fa-call">
+                            <i class="fas fa-phone-alt"></i>
+                            Ligar para mim
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Códigos de Backup -->
+                <div class="backup-codes">
+                    <div class="backup-header">
+                        <i class="fas fa-key"></i>
+                        <h3>Códigos de Backup</h3>
+                    </div>
+                    <p></p>
+                    <button class="btn-backup-codes" id="btn-show-backup-codes">
+                        Usar Código de Backup
+                    </button>
+                    
+                    <!-- Campo de Código de Backup -->
+                    <div class="backup-code-input" id="backup-code-field" style="display: none;">
+                        <div class="input-with-icon">
+                            <i class="fas fa-key"></i>
+                            <input type="text" id="backup-code" placeholder="XXXX-XXXX-XXXX">
+                        </div>
+                        <button class="btn-verify-backup">Verificar</button>
+                    </div>
+                </div>
+                
+                <!-- Aviso de Segurança -->
+                <div class="security-notice">
+                    <i class="fas fa-shield-alt"></i>
+                    <p></p>
+                </div>
+                
+                <!-- Ajuda -->
+                <div class="verification-help">
+                    <h3>Precisa de ajuda?</h3>
+                    <p></p>
+                    <div class="help-links">
+                        <a href="../home/faq.html"><i class="fas fa-question-circle"></i> FAQ</a>
+                        <a href="../home/contato.html"><i class="fas fa-headset"></i> Suporte</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Sidebar com Informações -->
+            <div class="verification-sidebar">
+                <div class="sidebar-content">
+                    <h2><i class="fas fa-info-circle"></i> Sobre 2FA</h2>
+                    
+                    <div class="tip-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <div>
+                            <h3>Mais Segurança</h3>
+                            <p></p>
+                        </div>
+                    </div>
+                    
+                    <div class="tip-item">
+                        <i class="fas fa-mobile-alt"></i>
+                        <div>
+                            <h3>Como Funciona</h3>
+                            <p></p>
+                        </div>
+                    </div>
+                    
+                    <div class="tip-item">
+                        <i class="fas fa-key"></i>
+                        <div>
+                            <h3>Códigos de Backup</h3>
+                            <p></p>
+                        </div>
+                    </div>
+                    
+                    <div class="tip-item">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <div>
+                            <h3>Perdeu o Acesso?</h3>
+                            <p></p>
+                        </div>
+                    </div>
+                    
+                    <div class="tip-item">
+                        <i class="fas fa-lock"></i>
+                        <div>
+                            <h3>Nunca Compartilhe</h3>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Simplificado -->
+    <footer class="auth-footer">
+        <div class="auth-footer-container">
+            <p>&copy; 2024 - Todos os direitos reservados</p>
+            <div class="auth-footer-links">
+                <a href="../home/termos.html">Termos</a>
+                <a href="../home/privacidade.html">Privacidade</a>
+                <a href="../home/contato.html">Contato</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../assets/js/script.js"></script>
+</body>
+</html>
