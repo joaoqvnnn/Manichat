@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Header do App -->
+    <header class="app-header">
+        <div class="app-header-container">
+            <div class="app-logo">
+                <a href="dashboard.html"></a>
+            </div>
+            
+            <div class="app-header-actions">
+                <button class="app-notification-btn">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-count">3</span>
+                </button>
+                
+                <div class="app-user-menu">
+                    <button class="app-user-avatar">
+                        <img src="../../assets/images/usuarios/avatar.jpg" alt="">
+                        <span></span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="app-user-dropdown">
+                        <a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+                        <a href="configuracoes.html"><i class="fas fa-cog"></i> Configurações</a>
+                        <a href="../autenticacao/login.html"><i class="fas fa-sign-out-alt"></i> Sair</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <section class="app-main">
+        <div class="app-container">
+            
+            <!-- Sidebar -->
+            <aside class="app-sidebar">
+                <nav class="app-nav">
+                    <div class="app-nav-section">
+                        <h3>Principal</h3>
+                        <a href="dashboard.html">
+                            <i class="fas fa-dashboard"></i> Dashboard
+                        </a>
+                    </div>
+                    
+                    <div class="app-nav-section">
+                        <h3>Configurações</h3>
+                        <a href="notificacoes.html">
+                            <i class="fas fa-bell"></i> Notificações
+                        </a>
+                        <a href="configuracoes.html" class="active">
+                            <i class="fas fa-cog"></i> Configurações
+                        </a>
+                    </div>
+                </nav>
+            </aside>
+            
+            <!-- Conteúdo Principal -->
+            <main class="app-content">
+                
+                <!-- Cabeçalho -->
+                <div class="app-content-header">
+                    <div>
+                        <h1>Configurações</h1>
+                        <p></p>
+                    </div>
+                </div>
+                
+                <!-- Formulário -->
+                <form class="settings-form">
+                    
+                    <!-- Informações da Conta -->
+                    <div class="form-section">
+                        <h2>Informações da Conta</h2>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="config-nome">Nome *</label>
+                                <input type="text" id="config-nome" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="config-email">E-mail *</label>
+                                <input type="email" id="config-email" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="config-telefone">Telefone *</label>
+                                <input type="tel" id="config-telefone" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="config-idioma">Idioma</label>
+                                <select id="config-idioma">
+                                    <option value="pt-br" selected>Português (Brasil)</option>
+                                    <option value="en">English</option>
+                                    <option value="es">Español</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Preferências -->
+                    <div class="form-section">
+                        <h2>Preferências</h2>
+                        
+                        <div class="settings-toggle-item">
+                            <div class="toggle-info">
+                                <h3>Receber e-mails de marketing</h3>
+                                <p></p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                        
+                        <div class="settings-toggle-item">
+                            <div class="toggle-info">
+                                <h3>Confirmação antes de enviar</h3>
+                                <p></p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                        
+                        <div class="settings-toggle-item">
+                            <div class="toggle-info">
+                                <h3>Modo escuro</h3>
+                                <p></p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox">
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <!-- Botões -->
+                    <div class="form-actions">
+                        <button type="submit" class="btn-primary">
+                            <i class="fas fa-save"></i> Salvar Configurações
+                        </button>
+                    </div>
+                </form>
+                
+                <!-- Zona de Perigo -->
+                <div class="settings-danger-zone">
+                    <h2>Zona de Perigo</h2>
+                    
+                    <div class="danger-actions">
+                        <button class="btn-delete-account">
+                            <i class="fas fa-trash"></i> Excluir Conta
+                        </button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </section>
+
+    <script src="../../assets/js/script.js"></script>
+</body>
+</html>
