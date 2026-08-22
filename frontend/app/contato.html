@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Header do App -->
+    <header class="app-header">
+        <div class="app-header-container">
+            <div class="app-logo">
+                <a href="dashboard.html"></a>
+            </div>
+            
+            <div class="app-header-actions">
+                <button class="app-notification-btn">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-count">3</span>
+                </button>
+                
+                <div class="app-user-menu">
+                    <button class="app-user-avatar">
+                        <img src="../../assets/images/usuarios/avatar.jpg" alt="">
+                        <span></span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="app-user-dropdown">
+                        <a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+                        <a href="../autenticacao/login.html"><i class="fas fa-sign-out-alt"></i> Sair</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <section class="app-main">
+        <div class="app-container">
+            
+            <!-- Sidebar -->
+            <aside class="app-sidebar">
+                <nav class="app-nav">
+                    <div class="app-nav-section">
+                        <h3>Principal</h3>
+                        <a href="dashboard.html">
+                            <i class="fas fa-dashboard"></i> Dashboard
+                        </a>
+                        <a href="automacoes.html">
+                            <i class="fas fa-robot"></i> Automações
+                        </a>
+                        <a href="contatos.html" class="active">
+                            <i class="fas fa-users"></i> Contatos
+                        </a>
+                    </div>
+                </nav>
+            </aside>
+            
+            <!-- Conteúdo Principal -->
+            <main class="app-content">
+                
+                <!-- Cabeçalho -->
+                <div class="app-content-header">
+                    <a href="contatos.html" class="btn-back">
+                        <i class="fas fa-arrow-left"></i> Voltar
+                    </a>
+                    <h1>Detalhes do Contato</h1>
+                </div>
+                
+                <!-- Card do Contato -->
+                <div class="contact-profile-card">
+                    <div class="contact-avatar-large">
+                        <img src="../../assets/images/contatos/contato1.jpg" alt="">
+                    </div>
+                    <div class="contact-profile-info">
+                        <h2></h2>
+                        <p><i class="fas fa-envelope"></i> </p>
+                        <p><i class="fas fa-phone"></i> </p>
+                    </div>
+                    <div class="contact-profile-actions">
+                        <button class="btn-edit-contact"><i class="fas fa-edit"></i> Editar</button>
+                        <button class="btn-delete-contact"><i class="fas fa-trash"></i> Excluir</button>
+                    </div>
+                </div>
+                
+                <!-- Informações -->
+                <div class="contact-detail-grid">
+                    <div class="info-card">
+                        <h3>Informações</h3>
+                        <div class="info-list">
+                            <div class="info-row">
+                                <span>Nome:</span>
+                                <strong></strong>
+                            </div>
+                            <div class="info-row">
+                                <span>E-mail:</span>
+                                <strong></strong>
+                            </div>
+                            <div class="info-row">
+                                <span>Telefone:</span>
+                                <strong></strong>
+                            </div>
+                            <div class="info-row">
+                                <span>WhatsApp:</span>
+                                <strong></strong>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h3>Tags</h3>
+                        <div class="tags-list">
+                            <span class="tag"></span>
+                            <span class="tag"></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Histórico de Mensagens -->
+                <div class="contact-messages">
+                    <h3>Histórico de Mensagens</h3>
+                    
+                    <div class="messages-list">
+                        <div class="message-item">
+                            <div class="message-icon">
+                                <i class="fas fa-comment"></i>
+                            </div>
+                            <div class="message-content">
+                                <h4></h4>
+                                <p></p>
+                            </div>
+                            <span class="message-date"></span>
+                        </div>
+                        
+                        <div class="message-item">
+                            <div class="message-icon">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="message-content">
+                                <h4></h4>
+                                <p></p>
+                            </div>
+                            <span class="message-date"></span>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </section>
+
+    <script src="../../assets/js/script.js"></script>
+</body>
+</html>
