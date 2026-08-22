@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Header do App -->
+    <header class="app-header">
+        <div class="app-header-container">
+            <div class="app-logo">
+                <a href="dashboard.html"></a>
+            </div>
+            
+            <div class="app-header-actions">
+                <button class="app-notification-btn">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-count">3</span>
+                </button>
+                
+                <div class="app-user-menu">
+                    <button class="app-user-avatar">
+                        <img src="../../assets/images/usuarios/avatar.jpg" alt="">
+                        <span></span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="app-user-dropdown">
+                        <a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+                        <a href="../autenticacao/login.html"><i class="fas fa-sign-out-alt"></i> Sair</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <section class="app-main">
+        <div class="app-container">
+            
+            <!-- Sidebar -->
+            <aside class="app-sidebar">
+                <nav class="app-nav">
+                    <div class="app-nav-section">
+                        <h3>Principal</h3>
+                        <a href="dashboard.html">
+                            <i class="fas fa-dashboard"></i> Dashboard
+                        </a>
+                        <a href="automacoes.html">
+                            <i class="fas fa-robot"></i> Automações
+                        </a>
+                    </div>
+                    
+                    <div class="app-nav-section">
+                        <h3>Ferramentas</h3>
+                        <a href="equipe.html" class="active">
+                            <i class="fas fa-users-cog"></i> Equipe
+                        </a>
+                    </div>
+                </nav>
+            </aside>
+            
+            <!-- Conteúdo Principal -->
+            <main class="app-content">
+                
+                <!-- Cabeçalho -->
+                <div class="app-content-header">
+                    <div>
+                        <h1>Equipe</h1>
+                        <p></p>
+                    </div>
+                    <button class="btn-primary">
+                        <i class="fas fa-plus"></i> Convidar Membro
+                    </button>
+                </div>
+                
+                <!-- Estatísticas -->
+                <div class="app-stats-grid">
+                    <div class="app-stat-card">
+                        <i class="fas fa-users"></i>
+                        <div>
+                            <span class="app-stat-value"></span>
+                            <span class="app-stat-label">Total de Membros</span>
+                        </div>
+                    </div>
+                    
+                    <div class="app-stat-card">
+                        <i class="fas fa-user-shield"></i>
+                        <div>
+                            <span class="app-stat-value"></span>
+                            <span class="app-stat-label">Administradores</span>
+                        </div>
+                    </div>
+                    
+                    <div class="app-stat-card">
+                        <i class="fas fa-user-clock"></i>
+                        <div>
+                            <span class="app-stat-value"></span>
+                            <span class="app-stat-label">Pendentes</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Lista de Membros -->
+                <div class="team-members-list">
+                    
+                    <!-- Membro 1 -->
+                    <div class="team-member-card">
+                        <div class="member-avatar">
+                            <img src="../../assets/images/equipe/membro1.jpg" alt="">
+                            <span class="online-dot"></span>
+                        </div>
+                        <div class="member-info">
+                            <h3></h3>
+                            <p><i class="fas fa-envelope"></i> </p>
+                        </div>
+                        <span class="member-role">Administrador</span>
+                        <div class="member-actions">
+                            <button class="btn-edit"><i class="fas fa-edit"></i></button>
+                            <button class="btn-delete"><i class="fas fa-trash"></i></button>
+                        </div>
+                    </div>
+                    
+                    <!-- Membro 2 -->
+                    <div class="team-member-card">
+                        <div class="member-avatar">
+                            <img src="../../assets/images/equipe/membro2.jpg" alt="">
+                        </div>
+                        <div class="member-info">
+                            <h3></h3>
+                            <p><i class="fas fa-envelope"></i> </p>
+                        </div>
+                        <span class="member-role">Membro</span>
+                        <div class="member-actions">
+                            <button class="btn-edit"><i class="fas fa-edit"></i></button>
+                            <button class="btn-delete"><i class="fas fa-trash"></i></button>
+                        </div>
+                    </div>
+                    
+                    <!-- Membro 3 - Pendente -->
+                    <div class="team-member-card pending">
+                        <div class="member-avatar">
+                            <img src="../../assets/images/equipe/membro3.jpg" alt="">
+                        </div>
+                        <div class="member-info">
+                            <h3></h3>
+                            <p><i class="fas fa-envelope"></i> </p>
+                        </div>
+                        <span class="member-role">Pendente</span>
+                        <div class="member-actions">
+                            <button class="btn-resend"><i class="fas fa-envelope"></i></button>
+                            <button class="btn-cancel"><i class="fas fa-times"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </section>
+
+    <script src="../../assets/js/script.js"></script>
+</body>
+</html>
