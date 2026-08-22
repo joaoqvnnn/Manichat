@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Header do Builder -->
+    <header class="builder-header">
+        <div class="builder-header-container">
+            <div class="builder-logo">
+                <a href="../index.html">
+                    <i class="fas fa-cubes"></i>
+                    <span>Builder</span>
+                </a>
+            </div>
+            
+            <div class="builder-header-actions">
+                <a href="../editar-fluxo.html" class="btn-back-flow">
+                    <i class="fas fa-arrow-left"></i> Voltar ao Fluxo
+                </a>
+                <button class="btn-save-block"><i class="fas fa-save"></i> Salvar Bloco</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <section class="block-editor-main">
+        <div class="block-editor-container">
+            
+            <!-- Cabeçalho -->
+            <div class="block-editor-header">
+                <div class="block-icon action">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <h1>Configurar Transferência</h1>
+                <p></p>
+            </div>
+            
+            <!-- Tipo de Transferência -->
+            <div class="form-section">
+                <h2>Tipo de Transferência</h2>
+                
+                <div class="transfer-type-options">
+                    <label class="transfer-type-card">
+                        <input type="radio" name="tipo-transferencia" value="atendente" checked>
+                        <i class="fas fa-user"></i>
+                        <h3>Atendente Humano</h3>
+                        <p></p>
+                    </label>
+                    
+                    <label class="transfer-type-card">
+                        <input type="radio" name="tipo-transferencia" value="departamento">
+                        <i class="fas fa-building"></i>
+                        <h3>Departamento</h3>
+                        <p></p>
+                    </label>
+                    
+                    <label class="transfer-type-card">
+                        <input type="radio" name="tipo-transferencia" value="fluxo">
+                        <i class="fas fa-robot"></i>
+                        <h3>Outro Fluxo</h3>
+                        <p></p>
+                    </label>
+                </div>
+            </div>
+            
+            <!-- Configuração do Atendente -->
+            <div class="form-section">
+                <h2>Configuração</h2>
+                
+                <div class="form-group">
+                    <label>Selecionar Atendente</label>
+                    <select>
+                        <option value="">Selecione...</option>
+                        <option value="atendente1">Atendente 1</option>
+                        <option value="atendente2">Atendente 2</option>
+                        <option value="atendente3">Atendente 3</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Prioridade</label>
+                    <select>
+                        <option value="alta">Alta</option>
+                        <option value="media" selected>Média</option>
+                        <option value="baixa">Baixa</option>
+                    </select>
+                </div>
+            </div>
+            
+            <!-- Mensagem de Transferência -->
+            <div class="form-section">
+                <h2>Mensagem de Transferência</h2>
+                
+                <div class="form-group">
+                    <label>Mensagem enviada ao usuário</label>
+                    <textarea rows="3" placeholder=""></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label>Mensagem enviada ao atendente</label>
+                    <textarea rows="3" placeholder=""></textarea>
+                </div>
+            </div>
+            
+            <!-- Regras -->
+            <div class="form-section">
+                <h2>Regras</h2>
+                
+                <div class="form-group">
+                    <label class="checkbox-container">
+                        <input type="checkbox" checked>
+                        <span class="checkmark"></span>
+                        Transferir se não houver resposta em X minutos
+                    </label>
+                </div>
+                
+                <div class="form-group">
+                    <label class="checkbox-container">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        Transferir quando palavra-chave for detectada
+                    </label>
+                </div>
+                
+                <div class="form-group">
+                    <label class="checkbox-container">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        Transferir apenas em horário comercial
+                    </label>
+                </div>
+            </div>
+            
+            <!-- Resumo -->
+            <div class="form-section">
+                <h2>Resumo</h2>
+                
+                <div class="transfer-summary">
+                    <div class="summary-item">
+                        <span>Tipo:</span>
+                        <strong>Atendente Humano</strong>
+                    </div>
+                    <div class="summary-item">
+                        <span>Destino:</span>
+                        <strong></strong>
+                    </div>
+                    <div class="summary-item">
+                        <span>Prioridade:</span>
+                        <strong>Média</strong>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Botões -->
+            <div class="form-actions">
+                <button type="submit" class="btn-primary">
+                    <i class="fas fa-save"></i> Salvar Transferência
+                </button>
+                
+                <a href="../editar-fluxo.html" class="btn-cancel">
+                    <i class="fas fa-times"></i> Cancelar
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script src="../../assets/js/script.js"></script>
+</body>
+</html>
