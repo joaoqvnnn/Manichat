@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Header do Builder -->
+    <header class="builder-header">
+        <div class="builder-header-container">
+            <div class="builder-logo">
+                <a href="../index.html">
+                    <i class="fas fa-cubes"></i>
+                    <span>Builder</span>
+                </a>
+            </div>
+            
+            <div class="builder-header-actions">
+                <a href="../editar-fluxo.html" class="btn-back-flow">
+                    <i class="fas fa-arrow-left"></i> Voltar ao Fluxo
+                </a>
+                <button class="btn-save-block"><i class="fas fa-save"></i> Salvar Bloco</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <section class="block-editor-main">
+        <div class="block-editor-container">
+            
+            <!-- Cabeçalho -->
+            <div class="block-editor-header">
+                <div class="block-icon action">
+                    <i class="fas fa-file"></i>
+                </div>
+                <h1>Configurar Documento</h1>
+                <p></p>
+            </div>
+            
+            <!-- Upload do Documento -->
+            <div class="form-section">
+                <h2>Documento</h2>
+                
+                <div class="document-upload-area">
+                    <div class="document-preview">
+                        <i class="fas fa-file-pdf"></i>
+                        <p></p>
+                    </div>
+                    <button class="btn-upload-document">
+                        <i class="fas fa-upload"></i> Enviar Documento
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Nome do Arquivo -->
+            <div class="form-section">
+                <h2>Nome do Arquivo</h2>
+                
+                <div class="form-group">
+                    <label>Nome personalizado</label>
+                    <input type="text" placeholder="">
+                </div>
+            </div>
+            
+            <!-- Legenda -->
+            <div class="form-section">
+                <h2>Legenda</h2>
+                
+                <div class="form-group">
+                    <label>Texto da Legenda</label>
+                    <textarea rows="3" placeholder=""></textarea>
+                </div>
+            </div>
+            
+            <!-- Configurações -->
+            <div class="form-section">
+                <h2>Configurações</h2>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Tempo de Atraso</label>
+                        <input type="number" min="0" value="0">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Unidade</label>
+                        <select>
+                            <option value="segundos">Segundos</option>
+                            <option value="minutos">Minutos</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tipos Aceitos -->
+            <div class="form-section">
+                <h2>Tipos de Arquivo Aceitos</h2>
+                
+                <div class="file-types-list">
+                    <div class="file-type-item">
+                        <i class="fas fa-file-pdf"></i>
+                        <span>PDF</span>
+                    </div>
+                    <div class="file-type-item">
+                        <i class="fas fa-file-word"></i>
+                        <span>Word</span>
+                    </div>
+                    <div class="file-type-item">
+                        <i class="fas fa-file-excel"></i>
+                        <span>Excel</span>
+                    </div>
+                    <div class="file-type-item">
+                        <i class="fas fa-file-image"></i>
+                        <span>Imagem</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Botões -->
+            <div class="form-actions">
+                <button type="submit" class="btn-primary">
+                    <i class="fas fa-save"></i> Salvar Documento
+                </button>
+                
+                <a href="../editar-fluxo.html" class="btn-cancel">
+                    <i class="fas fa-times"></i> Cancelar
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script src="../../assets/js/script.js"></script>
+</body>
+</html>
