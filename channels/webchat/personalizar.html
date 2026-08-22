@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Header do App -->
+    <header class="app-header">
+        <div class="app-header-container">
+            <div class="app-logo">
+                <a href="../app/dashboard.html"></a>
+            </div>
+            
+            <div class="app-header-actions">
+                <button class="app-notification-btn">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-count">3</span>
+                </button>
+                
+                <div class="app-user-menu">
+                    <button class="app-user-avatar">
+                        <img src="../../assets/images/usuarios/avatar.jpg" alt="">
+                        <span></span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="app-user-dropdown">
+                        <a href="../app/dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+                        <a href="../autenticacao/login.html"><i class="fas fa-sign-out-alt"></i> Sair</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <section class="webchat-personalize-main">
+        <div class="webchat-personalize-container">
+            
+            <!-- Cabeçalho -->
+            <div class="webchat-personalize-header">
+                <a href="configurar.html" class="btn-back">
+                    <i class="fas fa-arrow-left"></i> Voltar
+                </a>
+                <h1>Personalizar Webchat</h1>
+            </div>
+            
+            <div class="webchat-personalize-layout">
+                
+                <!-- Formulário de Personalização -->
+                <div class="personalize-form">
+                    
+                    <!-- Cores -->
+                    <div class="form-section">
+                        <h2>Cores</h2>
+                        
+                        <div class="form-group">
+                            <label>Cor Principal</label>
+                            <input type="color" value="#2196F3">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Cor do Texto</label>
+                            <input type="color" value="#FFFFFF">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Cor do Balão do Bot</label>
+                            <input type="color" value="#E0E0E0">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Cor do Balão do Usuário</label>
+                            <input type="color" value="#2196F3">
+                        </div>
+                    </div>
+                    
+                    <!-- Posição -->
+                    <div class="form-section">
+                        <h2>Posição</h2>
+                        
+                        <div class="form-group">
+                            <label>Posição do Botão</label>
+                            <select>
+                                <option value="direita">Direita</option>
+                                <option value="esquerda">Esquerda</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <!-- Avatar -->
+                    <div class="form-section">
+                        <h2>Avatar</h2>
+                        
+                        <div class="avatar-upload">
+                            <div class="avatar-preview">
+                                <img src="../../assets/images/usuarios/avatar.jpg" alt="">
+                            </div>
+                            <button class="btn-upload-avatar">
+                                <i class="fas fa-upload"></i> Enviar Avatar
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Textos -->
+                    <div class="form-section">
+                        <h2>Textos</h2>
+                        
+                        <div class="form-group">
+                            <label>Título do Chat</label>
+                            <input type="text" placeholder="">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Mensagem de Boas-vindas</label>
+                            <textarea rows="3" placeholder=""></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Placeholder do Input</label>
+                            <input type="text" placeholder="">
+                        </div>
+                    </div>
+                    
+                    <!-- Botões -->
+                    <div class="form-actions">
+                        <button type="submit" class="btn-primary">
+                            <i class="fas fa-save"></i> Salvar Personalização
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Preview do Webchat -->
+                <div class="webchat-preview">
+                    <h2>Pré-visualização</h2>
+                    
+                    <div class="webchat-preview-box">
+                        <!-- Botão do Chat -->
+                        <button class="chat-preview-button" style="background: #2196F3;">
+                            <i class="fas fa-comments"></i>
+                        </button>
+                        
+                        <!-- Janela do Chat -->
+                        <div class="chat-preview-window">
+                            <div class="chat-preview-header" style="background: #2196F3;">
+                                <img src="../../assets/images/usuarios/avatar.jpg" alt="">
+                                <div>
+                                    <h3></h3>
+                                    <span>Online</span>
+                                </div>
+                                <button class="btn-close-chat"><i class="fas fa-times"></i></button>
+                            </div>
+                            
+                            <div class="chat-preview-messages">
+                                <div class="msg bot">
+                                    <div class="msg-bubble" style="background: #E0E0E0;">
+                                        <p></p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="chat-preview-input">
+                                <input type="text" placeholder="" disabled>
+                                <button class="btn-send" style="background: #2196F3;" disabled>
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="../../assets/js/script.js"></script>
+</body>
+</html>
