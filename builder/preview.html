@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title></title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="preview-body">
+    <!-- Barra de Preview -->
+    <div class="preview-bar">
+        <div class="preview-bar-container">
+            <a href="editar-fluxo.html" class="btn-back-builder">
+                <i class="fas fa-arrow-left"></i> Voltar ao Editor
+            </a>
+            <span class="preview-label"><i class="fas fa-eye"></i> Modo Preview</span>
+            <div class="preview-actions">
+                <button class="btn-device active"><i class="fas fa-mobile-alt"></i></button>
+                <button class="btn-device"><i class="fas fa-tablet-alt"></i></button>
+                <button class="btn-device"><i class="fas fa-desktop"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Área de Preview -->
+    <section class="preview-main">
+        <div class="preview-container">
+            
+            <!-- Preview Mobile -->
+            <div class="preview-device mobile">
+                <div class="device-header">
+                    <div class="device-notch"></div>
+                </div>
+                
+                <div class="device-content">
+                    <!-- Simulação do WhatsApp -->
+                    <div class="whatsapp-preview">
+                        <div class="whatsapp-header">
+                            <i class="fas fa-arrow-left"></i>
+                            <div class="contact-info">
+                                <img src="../assets/images/contatos/contato1.jpg" alt="">
+                                <div>
+                                    <h3></h3>
+                                    <span>Online</span>
+                                </div>
+                            </div>
+                            <div class="header-actions">
+                                <i class="fas fa-video"></i>
+                                <i class="fas fa-phone"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="whatsapp-messages">
+                            <!-- Mensagem do Bot -->
+                            <div class="msg bot">
+                                <div class="msg-bubble">
+                                    <p></p>
+                                    <span class="msg-time"></span>
+                                </div>
+                            </div>
+                            
+                            <!-- Mensagem do Usuário -->
+                            <div class="msg user">
+                                <div class="msg-bubble">
+                                    <p></p>
+                                    <span class="msg-time"></span>
+                                </div>
+                            </div>
+                            
+                            <!-- Mensagem do Bot -->
+                            <div class="msg bot">
+                                <div class="msg-bubble">
+                                    <p></p>
+                                    <span class="msg-time"></span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="whatsapp-input">
+                            <input type="text" placeholder="Mensagem" disabled>
+                            <button class="btn-send" disabled><i class="fas fa-paper-plane"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Informações do Preview -->
+            <div class="preview-info">
+                <h2>Pré-visualização do Fluxo</h2>
+                <p></p>
+                
+                <div class="preview-details">
+                    <div class="detail-item">
+                        <span>Nome do Fluxo:</span>
+                        <strong></strong>
+                    </div>
+                    <div class="detail-item">
+                        <span>Blocos:</span>
+                        <strong></strong>
+                    </div>
+                    <div class="detail-item">
+                        <span>Status:</span>
+                        <strong>Ativo</strong>
+                    </div>
+                </div>
+                
+                <a href="editar-fluxo.html" class="btn-primary">
+                    <i class="fas fa-edit"></i> Editar Fluxo
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>
