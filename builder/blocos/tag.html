@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Header do Builder -->
+    <header class="builder-header">
+        <div class="builder-header-container">
+            <div class="builder-logo">
+                <a href="../index.html">
+                    <i class="fas fa-cubes"></i>
+                    <span>Builder</span>
+                </a>
+            </div>
+            
+            <div class="builder-header-actions">
+                <a href="../editar-fluxo.html" class="btn-back-flow">
+                    <i class="fas fa-arrow-left"></i> Voltar ao Fluxo
+                </a>
+                <button class="btn-save-block"><i class="fas fa-save"></i> Salvar Bloco</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <section class="block-editor-main">
+        <div class="block-editor-container">
+            
+            <!-- Cabeçalho -->
+            <div class="block-editor-header">
+                <div class="block-icon action">
+                    <i class="fas fa-tag"></i>
+                </div>
+                <h1>Configurar Tag</h1>
+                <p></p>
+            </div>
+            
+            <!-- Ação da Tag -->
+            <div class="form-section">
+                <h2>Ação</h2>
+                
+                <div class="tag-action-options">
+                    <label class="tag-action-card">
+                        <input type="radio" name="acao-tag" value="adicionar" checked>
+                        <i class="fas fa-plus"></i>
+                        <h3>Adicionar Tag</h3>
+                    </label>
+                    
+                    <label class="tag-action-card">
+                        <input type="radio" name="acao-tag" value="remover">
+                        <i class="fas fa-minus"></i>
+                        <h3>Remover Tag</h3>
+                    </label>
+                </div>
+            </div>
+            
+            <!-- Seleção da Tag -->
+            <div class="form-section">
+                <h2>Seleção da Tag</h2>
+                
+                <div class="form-group">
+                    <label>Tag *</label>
+                    <select>
+                        <option value="">Selecione a tag...</option>
+                        <option value="tag1">Tag 1</option>
+                        <option value="tag2">Tag 2</option>
+                        <option value="tag3">Tag 3</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Ou criar nova tag</label>
+                    <input type="text" placeholder="Nome da nova tag">
+                </div>
+            </div>
+            
+            <!-- Cor da Tag -->
+            <div class="form-section">
+                <h2>Cor da Tag</h2>
+                
+                <div class="color-options">
+                    <label class="color-option" style="background: #FF5722;">
+                        <input type="radio" name="tag-color" value="orange" checked>
+                    </label>
+                    <label class="color-option" style="background: #4CAF50;">
+                        <input type="radio" name="tag-color" value="green">
+                    </label>
+                    <label class="color-option" style="background: #2196F3;">
+                        <input type="radio" name="tag-color" value="blue">
+                    </label>
+                    <label class="color-option" style="background: #9C27B0;">
+                        <input type="radio" name="tag-color" value="purple">
+                    </label>
+                    <label class="color-option" style="background: #F44336;">
+                        <input type="radio" name="tag-color" value="red">
+                    </label>
+                    <label class="color-option" style="background: #FFC107;">
+                        <input type="radio" name="tag-color" value="yellow">
+                    </label>
+                </div>
+            </div>
+            
+            <!-- Preview -->
+            <div class="form-section">
+                <h2>Pré-visualização</h2>
+                
+                <div class="tag-preview">
+                    <span class="tag-preview-item">
+                        <i class="fas fa-tag"></i>
+                        Nome da Tag
+                    </span>
+                </div>
+            </div>
+            
+            <!-- Botões -->
+            <div class="form-actions">
+                <button type="submit" class="btn-primary">
+                    <i class="fas fa-save"></i> Salvar Tag
+                </button>
+                
+                <a href="../editar-fluxo.html" class="btn-cancel">
+                    <i class="fas fa-times"></i> Cancelar
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script src="../../assets/js/script.js"></script>
+</body>
+</html>
