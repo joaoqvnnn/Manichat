@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Header do Builder -->
+    <header class="builder-header">
+        <div class="builder-header-container">
+            <div class="builder-logo">
+                <a href="../index.html">
+                    <i class="fas fa-cubes"></i>
+                    <span>Builder</span>
+                </a>
+            </div>
+            
+            <div class="builder-header-actions">
+                <a href="../editar-fluxo.html" class="btn-back-flow">
+                    <i class="fas fa-arrow-left"></i> Voltar ao Fluxo
+                </a>
+                <button class="btn-save-block"><i class="fas fa-save"></i> Salvar Bloco</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <section class="block-editor-main">
+        <div class="block-editor-container">
+            
+            <!-- Cabeçalho -->
+            <div class="block-editor-header">
+                <div class="block-icon action">
+                    <i class="fas fa-server"></i>
+                </div>
+                <h1>Configurar Requisição HTTP</h1>
+                <p></p>
+            </div>
+            
+            <!-- URL da Requisição -->
+            <div class="form-section">
+                <h2>URL da Requisição</h2>
+                
+                <div class="form-group">
+                    <label>URL *</label>
+                    <input type="url" placeholder="https://api.exemplo.com/endpoint" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Método HTTP *</label>
+                    <select>
+                        <option value="GET">GET</option>
+                        <option value="POST" selected>POST</option>
+                        <option value="PUT">PUT</option>
+                        <option value="PATCH">PATCH</option>
+                        <option value="DELETE">DELETE</option>
+                    </select>
+                </div>
+            </div>
+            
+            <!-- Headers -->
+            <div class="form-section">
+                <h2>Headers</h2>
+                
+                <div class="headers-list">
+                    <div class="header-item">
+                        <input type="text" placeholder="Chave" value="Content-Type">
+                        <input type="text" placeholder="Valor" value="application/json">
+                        <button class="btn-remove-header"><i class="fas fa-times"></i></button>
+                    </div>
+                    
+                    <div class="header-item">
+                        <input type="text" placeholder="Chave" value="Authorization">
+                        <input type="text" placeholder="Valor" value="Bearer ...">
+                        <button class="btn-remove-header"><i class="fas fa-times"></i></button>
+                    </div>
+                </div>
+                
+                <button class="btn-add-header">
+                    <i class="fas fa-plus"></i> Adicionar Header
+                </button>
+            </div>
+            
+            <!-- Parâmetros -->
+            <div class="form-section">
+                <h2>Parâmetros (Query String)</h2>
+                
+                <div class="params-list">
+                    <div class="param-item">
+                        <input type="text" placeholder="Chave">
+                        <input type="text" placeholder="Valor">
+                        <button class="btn-remove-param"><i class="fas fa-times"></i></button>
+                    </div>
+                </div>
+                
+                <button class="btn-add-param">
+                    <i class="fas fa-plus"></i> Adicionar Parâmetro
+                </button>
+            </div>
+            
+            <!-- Body -->
+            <div class="form-section">
+                <h2>Body</h2>
+                
+                <div class="form-group">
+                    <label>Tipo de Body</label>
+                    <select>
+                        <option value="json" selected>JSON</option>
+                        <option value="form">Form Data</option>
+                        <option value="raw">Raw Text</option>
+                        <option value="none">Nenhum</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Conteúdo</label>
+                    <textarea rows="6" placeholder='{
+  "key": "value"
+}'></textarea>
+                </div>
+            </div>
+            
+            <!-- Variáveis -->
+            <div class="form-section">
+                <h2>Variáveis Disponíveis</h2>
+                
+                <div class="variables-list">
+                    <button class="variable-btn">{{nome}}</button>
+                    <button class="variable-btn">{{email}}</button>
+                    <button class="variable-btn">{{telefone}}</button>
+                    <button class="variable-btn">{{resposta}}</button>
+                    <button class="variable-btn">{{id_contato}}</button>
+                </div>
+            </div>
+            
+            <!-- Resposta -->
+            <div class="form-section">
+                <h2>Tratamento da Resposta</h2>
+                
+                <div class="form-group">
+                    <label>Salvar resposta em</label>
+                    <select>
+                        <option value="">Selecione o campo...</option>
+                        <option value="campo1">Campo Personalizado 1</option>
+                        <option value="campo2">Campo Personalizado 2</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Timeout (segundos)</label>
+                    <input type="number" min="1" max="60" value="30">
+                </div>
+            </div>
+            
+            <!-- Teste -->
+            <div class="form-section">
+                <h2>Testar Requisição</h2>
+                
+                <button class="btn-test-request">
+                    <i class="fas fa-paper-plane"></i> Enviar Teste
+                </button>
+                
+                <div class="response-preview" style="display: none;">
+                    <h4>Resposta:</h4>
+                    <pre><code>{
+  "status": "success"
+}</code></pre>
+                </div>
+            </div>
+            
+            <!-- Botões -->
+            <div class="form-actions">
+                <button type="submit" class="btn-primary">
+                    <i class="fas fa-save"></i> Salvar Requisição
+                </button>
+                
+                <a href="../editar-fluxo.html" class="btn-cancel">
+                    <i class="fas fa-times"></i> Cancelar
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script src="../../assets/js/script.js"></script>
+</body>
+</html>
