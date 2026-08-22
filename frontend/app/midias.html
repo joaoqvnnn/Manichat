@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Header do App -->
+    <header class="app-header">
+        <div class="app-header-container">
+            <div class="app-logo">
+                <a href="dashboard.html"></a>
+            </div>
+            
+            <div class="app-header-actions">
+                <button class="app-notification-btn">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-count">3</span>
+                </button>
+                
+                <div class="app-user-menu">
+                    <button class="app-user-avatar">
+                        <img src="../../assets/images/usuarios/avatar.jpg" alt="">
+                        <span></span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="app-user-dropdown">
+                        <a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+                        <a href="../autenticacao/login.html"><i class="fas fa-sign-out-alt"></i> Sair</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <section class="app-main">
+        <div class="app-container">
+            
+            <!-- Sidebar -->
+            <aside class="app-sidebar">
+                <nav class="app-nav">
+                    <div class="app-nav-section">
+                        <h3>Principal</h3>
+                        <a href="dashboard.html">
+                            <i class="fas fa-dashboard"></i> Dashboard
+                        </a>
+                        <a href="automacoes.html">
+                            <i class="fas fa-robot"></i> Automações
+                        </a>
+                    </div>
+                    
+                    <div class="app-nav-section">
+                        <h3>Ferramentas</h3>
+                        <a href="campanhas.html">
+                            <i class="fas fa-bullhorn"></i> Campanhas
+                        </a>
+                        <a href="templates.html">
+                            <i class="fas fa-file-alt"></i> Templates
+                        </a>
+                        <a href="midias.html" class="active">
+                            <i class="fas fa-images"></i> Mídias
+                        </a>
+                    </div>
+                </nav>
+            </aside>
+            
+            <!-- Conteúdo Principal -->
+            <main class="app-content">
+                
+                <!-- Cabeçalho -->
+                <div class="app-content-header">
+                    <div>
+                        <h1>Mídias</h1>
+                        <p></p>
+                    </div>
+                    <button class="btn-primary">
+                        <i class="fas fa-upload"></i> Enviar Mídia
+                    </button>
+                </div>
+                
+                <!-- Filtros -->
+                <div class="app-filters">
+                    <button class="media-filter active">Todas</button>
+                    <button class="media-filter">Imagens</button>
+                    <button class="media-filter">Vídeos</button>
+                    <button class="media-filter">Áudios</button>
+                    <button class="media-filter">Documentos</button>
+                </div>
+                
+                <!-- Grid de Mídias -->
+                <div class="media-grid">
+                    
+                    <!-- Mídia 1 - Imagem -->
+                    <div class="media-card">
+                        <div class="media-preview">
+                            <img src="../../assets/images/midias/imagem1.jpg" alt="">
+                        </div>
+                        <div class="media-info">
+                            <h3></h3>
+                            <span class="media-type">Imagem</span>
+                            <span class="media-size"></span>
+                        </div>
+                        <div class="media-actions">
+                            <button class="btn-download"><i class="fas fa-download"></i></button>
+                            <button class="btn-delete"><i class="fas fa-trash"></i></button>
+                        </div>
+                    </div>
+                    
+                    <!-- Mídia 2 - Vídeo -->
+                    <div class="media-card">
+                        <div class="media-preview video">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                        <div class="media-info">
+                            <h3></h3>
+                            <span class="media-type">Vídeo</span>
+                            <span class="media-size"></span>
+                        </div>
+                        <div class="media-actions">
+                            <button class="btn-download"><i class="fas fa-download"></i></button>
+                            <button class="btn-delete"><i class="fas fa-trash"></i></button>
+                        </div>
+                    </div>
+                    
+                    <!-- Mídia 3 - Áudio -->
+                    <div class="media-card">
+                        <div class="media-preview audio">
+                            <i class="fas fa-music"></i>
+                        </div>
+                        <div class="media-info">
+                            <h3></h3>
+                            <span class="media-type">Áudio</span>
+                            <span class="media-size"></span>
+                        </div>
+                        <div class="media-actions">
+                            <button class="btn-download"><i class="fas fa-download"></i></button>
+                            <button class="btn-delete"><i class="fas fa-trash"></i></button>
+                        </div>
+                    </div>
+                    
+                    <!-- Mídia 4 - Documento -->
+                    <div class="media-card">
+                        <div class="media-preview document">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+                        <div class="media-info">
+                            <h3></h3>
+                            <span class="media-type">Documento</span>
+                            <span class="media-size"></span>
+                        </div>
+                        <div class="media-actions">
+                            <button class="btn-download"><i class="fas fa-download"></i></button>
+                            <button class="btn-delete"><i class="fas fa-trash"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </section>
+
+    <script src="../../assets/js/script.js"></script>
+</body>
+</html>
