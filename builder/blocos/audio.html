@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Header do Builder -->
+    <header class="builder-header">
+        <div class="builder-header-container">
+            <div class="builder-logo">
+                <a href="../index.html">
+                    <i class="fas fa-cubes"></i>
+                    <span>Builder</span>
+                </a>
+            </div>
+            
+            <div class="builder-header-actions">
+                <a href="../editar-fluxo.html" class="btn-back-flow">
+                    <i class="fas fa-arrow-left"></i> Voltar ao Fluxo
+                </a>
+                <button class="btn-save-block"><i class="fas fa-save"></i> Salvar Bloco</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <section class="block-editor-main">
+        <div class="block-editor-container">
+            
+            <!-- Cabeçalho -->
+            <div class="block-editor-header">
+                <div class="block-icon action">
+                    <i class="fas fa-music"></i>
+                </div>
+                <h1>Configurar Áudio</h1>
+                <p></p>
+            </div>
+            
+            <!-- Upload do Áudio -->
+            <div class="form-section">
+                <h2>Áudio</h2>
+                
+                <div class="audio-upload-area">
+                    <div class="audio-preview">
+                        <i class="fas fa-music"></i>
+                        <p></p>
+                    </div>
+                    <button class="btn-upload-audio">
+                        <i class="fas fa-upload"></i> Enviar Áudio
+                    </button>
+                </div>
+                
+                <div class="form-group">
+                    <label>URL do Áudio</label>
+                    <input type="url" placeholder="https://...">
+                </div>
+            </div>
+            
+            <!-- Player -->
+            <div class="form-section">
+                <h2>Player</h2>
+                
+                <div class="audio-player">
+                    <div class="player-controls">
+                        <button class="btn-play"><i class="fas fa-play"></i></button>
+                        <div class="player-progress">
+                            <div class="progress-fill" style="width: 0%;"></div>
+                        </div>
+                        <span class="player-time">00:00 / 00:00</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Configurações -->
+            <div class="form-section">
+                <h2>Configurações</h2>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Tempo de Atraso</label>
+                        <input type="number" min="0" value="0">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Unidade</label>
+                        <select>
+                            <option value="segundos">Segundos</option>
+                            <option value="minutos">Minutos</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Botões -->
+            <div class="form-actions">
+                <button type="submit" class="btn-primary">
+                    <i class="fas fa-save"></i> Salvar Áudio
+                </button>
+                
+                <a href="../editar-fluxo.html" class="btn-cancel">
+                    <i class="fas fa-times"></i> Cancelar
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script src="../../assets/js/script.js"></script>
+</body>
+</html>
