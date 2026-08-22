@@ -1,8 +1,51 @@
 {
   "rewrites": [
     {
-      "source": "/(.*)",
+      "source": "/",
       "destination": "/FRONTEND/HOME/index.html"
+    },
+    {
+      "source": "/home/:path*",
+      "destination": "/FRONTEND/HOME/:path*"
+    },
+    {
+      "source": "/auth/:path*",
+      "destination": "/FRONTEND/AUTENTICACAO/:path*"
+    },
+    {
+      "source": "/app/:path*",
+      "destination": "/FRONTEND/APP/:path*"
+    },
+    {
+      "source": "/builder/:path*",
+      "destination": "/BUILDER/:path*"
+    },
+    {
+      "source": "/channels/:path*",
+      "destination": "/CHANNELS/:path*"
+    },
+    {
+      "source": "/assets/:path*",
+      "destination": "/assets/:path*"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        }
+      ]
     }
   ]
 }
