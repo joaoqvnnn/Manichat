@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Header do App -->
+    <header class="app-header">
+        <div class="app-header-container">
+            <div class="app-logo">
+                <a href="dashboard.html"></a>
+            </div>
+            
+            <div class="app-header-actions">
+                <button class="app-notification-btn">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-count">3</span>
+                </button>
+                
+                <div class="app-user-menu">
+                    <button class="app-user-avatar">
+                        <img src="../../assets/images/usuarios/avatar.jpg" alt="">
+                        <span></span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="app-user-dropdown">
+                        <a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+                        <a href="../autenticacao/login.html"><i class="fas fa-sign-out-alt"></i> Sair</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <section class="app-main">
+        <div class="app-container">
+            
+            <!-- Sidebar -->
+            <aside class="app-sidebar">
+                <nav class="app-nav">
+                    <div class="app-nav-section">
+                        <h3>Principal</h3>
+                        <a href="dashboard.html">
+                            <i class="fas fa-dashboard"></i> Dashboard
+                        </a>
+                        <a href="automacoes.html" class="active">
+                            <i class="fas fa-robot"></i> Automações
+                        </a>
+                        <a href="contatos.html">
+                            <i class="fas fa-users"></i> Contatos
+                        </a>
+                    </div>
+                </nav>
+            </aside>
+            
+            <!-- Conteúdo Principal -->
+            <main class="app-content">
+                
+                <!-- Cabeçalho -->
+                <div class="app-content-header">
+                    <div>
+                        <h1>Automações</h1>
+                        <p></p>
+                    </div>
+                    <a href="automacao.html" class="btn-primary">
+                        <i class="fas fa-plus"></i> Nova Automação
+                    </a>
+                </div>
+                
+                <!-- Estatísticas -->
+                <div class="app-stats-grid">
+                    <div class="app-stat-card">
+                        <i class="fas fa-robot"></i>
+                        <div>
+                            <span class="app-stat-value"></span>
+                            <span class="app-stat-label">Total de Automações</span>
+                        </div>
+                    </div>
+                    
+                    <div class="app-stat-card">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <span class="app-stat-value"></span>
+                            <span class="app-stat-label">Ativas</span>
+                        </div>
+                    </div>
+                    
+                    <div class="app-stat-card">
+                        <i class="fas fa-pause-circle"></i>
+                        <div>
+                            <span class="app-stat-value"></span>
+                            <span class="app-stat-label">Pausadas</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Lista de Automações -->
+                <div class="automations-list">
+                    
+                    <!-- Automação 1 -->
+                    <div class="automation-card-large">
+                        <div class="automation-header">
+                            <div class="automation-icon">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="automation-info">
+                                <h3></h3>
+                                <p></p>
+                            </div>
+                            <div class="automation-status">
+                                <label class="toggle-switch">
+                                    <input type="checkbox" checked>
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="automation-stats">
+                            <div class="automation-stat">
+                                <span>Mensagens Enviadas</span>
+                                <strong></strong>
+                            </div>
+                            <div class="automation-stat">
+                                <span>Respostas</span>
+                                <strong></strong>
+                            </div>
+                            <div class="automation-stat">
+                                <span>Taxa de Resposta</span>
+                                <strong>%</strong>
+                            </div>
+                        </div>
+                        
+                        <div class="automation-actions">
+                            <a href="automacao.html" class="btn-edit"><i class="fas fa-edit"></i> Editar</a>
+                            <button class="btn-duplicate"><i class="fas fa-copy"></i> Duplicar</button>
+                            <button class="btn-delete"><i class="fas fa-trash"></i> Excluir</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Automação 2 -->
+                    <div class="automation-card-large">
+                        <div class="automation-header">
+                            <div class="automation-icon">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="automation-info">
+                                <h3></h3>
+                                <p></p>
+                            </div>
+                            <div class="automation-status">
+                                <label class="toggle-switch">
+                                    <input type="checkbox" checked>
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="automation-stats">
+                            <div class="automation-stat">
+                                <span>Mensagens Enviadas</span>
+                                <strong></strong>
+                            </div>
+                            <div class="automation-stat">
+                                <span>Respostas</span>
+                                <strong></strong>
+                            </div>
+                            <div class="automation-stat">
+                                <span>Taxa de Resposta</span>
+                                <strong>%</strong>
+                            </div>
+                        </div>
+                        
+                        <div class="automation-actions">
+                            <a href="automacao.html" class="btn-edit"><i class="fas fa-edit"></i> Editar</a>
+                            <button class="btn-duplicate"><i class="fas fa-copy"></i> Duplicar</button>
+                            <button class="btn-delete"><i class="fas fa-trash"></i> Excluir</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Automação 3 - Pausada -->
+                    <div class="automation-card-large paused">
+                        <div class="automation-header">
+                            <div class="automation-icon">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="automation-info">
+                                <h3></h3>
+                                <p></p>
+                            </div>
+                            <div class="automation-status">
+                                <label class="toggle-switch">
+                                    <input type="checkbox">
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="automation-stats">
+                            <div class="automation-stat">
+                                <span>Mensagens Enviadas</span>
+                                <strong></strong>
+                            </div>
+                            <div class="automation-stat">
+                                <span>Respostas</span>
+                                <strong></strong>
+                            </div>
+                            <div class="automation-stat">
+                                <span>Taxa de Resposta</span>
+                                <strong>%</strong>
+                            </div>
+                        </div>
+                        
+                        <div class="automation-actions">
+                            <a href="automacao.html" class="btn-edit"><i class="fas fa-edit"></i> Editar</a>
+                            <button class="btn-duplicate"><i class="fas fa-copy"></i> Duplicar</button>
+                            <button class="btn-delete"><i class="fas fa-trash"></i> Excluir</button>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </section>
+
+    <script src="../../assets/js/script.js"></script>
+</body>
+</html>
