@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Header do Builder -->
+    <header class="builder-header">
+        <div class="builder-header-container">
+            <div class="builder-logo">
+                <a href="../index.html">
+                    <i class="fas fa-cubes"></i>
+                    <span>Builder</span>
+                </a>
+            </div>
+            
+            <div class="builder-header-actions">
+                <a href="../editar-fluxo.html" class="btn-back-flow">
+                    <i class="fas fa-arrow-left"></i> Voltar ao Fluxo
+                </a>
+                <button class="btn-save-block"><i class="fas fa-save"></i> Salvar Bloco</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <section class="block-editor-main">
+        <div class="block-editor-container">
+            
+            <!-- Cabeçalho -->
+            <div class="block-editor-header">
+                <div class="block-icon trigger">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <h1>Configurar Gatilho</h1>
+                <p></p>
+            </div>
+            
+            <!-- Tipo de Gatilho -->
+            <div class="form-section">
+                <h2>Tipo de Gatilho</h2>
+                
+                <div class="trigger-type-options">
+                    <label class="trigger-type-card">
+                        <input type="radio" name="tipo-gatilho" value="nova-mensagem" checked>
+                        <i class="fas fa-comment"></i>
+                        <h3>Nova Mensagem</h3>
+                        <p></p>
+                    </label>
+                    
+                    <label class="trigger-type-card">
+                        <input type="radio" name="tipo-gatilho" value="palavra-chave">
+                        <i class="fas fa-key"></i>
+                        <h3>Palavra-chave</h3>
+                        <p></p>
+                    </label>
+                    
+                    <label class="trigger-type-card">
+                        <input type="radio" name="tipo-gatilho" value="novo-contato">
+                        <i class="fas fa-user-plus"></i>
+                        <h3>Novo Contato</h3>
+                        <p></p>
+                    </label>
+                    
+                    <label class="trigger-type-card">
+                        <input type="radio" name="tipo-gatilho" value="agendamento">
+                        <i class="fas fa-clock"></i>
+                        <h3>Agendamento</h3>
+                        <p></p>
+                    </label>
+                </div>
+            </div>
+            
+            <!-- Configurações do Gatilho -->
+            <div class="form-section">
+                <h2>Configurações</h2>
+                
+                <!-- Para Palavra-chave -->
+                <div class="trigger-config" id="config-palavra-chave">
+                    <div class="form-group">
+                        <label>Palavras-chave</label>
+                        <div class="keywords-input">
+                            <span class="keyword-tag">
+                                <i class="fas fa-times"></i>
+                            </span>
+                            <input type="text" placeholder="Digite e pressione Enter">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Para Agendamento -->
+                <div class="trigger-config" id="config-agendamento" style="display: none;">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Data</label>
+                            <input type="date">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Hora</label>
+                            <input type="time">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Frequência</label>
+                        <select>
+                            <option value="unico">Único</option>
+                            <option value="diario">Diário</option>
+                            <option value="semanal">Semanal</option>
+                            <option value="mensal">Mensal</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Integração -->
+            <div class="form-section">
+                <h2>Integração</h2>
+                
+                <div class="form-group">
+                    <label>Canal de Entrada</label>
+                    <select>
+                        <option value="whatsapp" selected>WhatsApp</option>
+                        <option value="telegram">Telegram</option>
+                        <option value="instagram">Instagram</option>
+                        <option value="email">E-mail</option>
+                    </select>
+                </div>
+            </div>
+            
+            <!-- Botões -->
+            <div class="form-actions">
+                <button type="submit" class="btn-primary">
+                    <i class="fas fa-save"></i> Salvar Gatilho
+                </button>
+                
+                <a href="../editar-fluxo.html" class="btn-cancel">
+                    <i class="fas fa-times"></i> Cancelar
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script src="../../assets/js/script.js"></script>
+</body>
+</html>
