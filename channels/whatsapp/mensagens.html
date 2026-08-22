@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title></title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Header do App -->
+    <header class="app-header">
+        <div class="app-header-container">
+            <div class="app-logo">
+                <a href="../app/dashboard.html"></a>
+            </div>
+            
+            <div class="app-header-actions">
+                <button class="app-notification-btn">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-count">3</span>
+                </button>
+                
+                <div class="app-user-menu">
+                    <button class="app-user-avatar">
+                        <img src="../../assets/images/usuarios/avatar.jpg" alt="">
+                        <span></span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="app-user-dropdown">
+                        <a href="../app/dashboard.html"><i class="fas fa-home"></i> Dashboard</a>
+                        <a href="../autenticacao/login.html"><i class="fas fa-sign-out-alt"></i> Sair</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <section class="channel-messages-main">
+        <div class="channel-messages-container">
+            
+            <!-- Sidebar do Canal -->
+            <aside class="channel-sidebar">
+                <div class="channel-sidebar-header">
+                    <div class="channel-icon whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h3>WhatsApp</h3>
+                    <span class="status-badge connected">Conectado</span>
+                </div>
+                
+                <nav class="channel-nav">
+                    <a href="configuracoes.html">
+                        <i class="fas fa-cog"></i> Configurações
+                    </a>
+                    <a href="templates.html">
+                        <i class="fas fa-file-alt"></i> Templates
+                    </a>
+                    <a href="mensagens.html" class="active">
+                        <i class="fas fa-comments"></i> Mensagens
+                    </a>
+                    <a href="contatos.html">
+                        <i class="fas fa-users"></i> Contatos
+                    </a>
+                    <a href="automacoes.html">
+                        <i class="fas fa-robot"></i> Automações
+                    </a>
+                </nav>
+            </aside>
+            
+            <!-- Conteúdo Principal -->
+            <main class="channel-content">
+                
+                <!-- Cabeçalho -->
+                <div class="channel-content-header">
+                    <div>
+                        <h1>Mensagens</h1>
+                        <p></p>
+                    </div>
+                </div>
+                
+                <!-- Filtros -->
+                <div class="app-filters">
+                    <button class="message-filter active">Todas</button>
+                    <button class="message-filter">Não Lidas</button>
+                    <button class="message-filter">Automatizadas</button>
+                    <button class="message-filter">Manuais</button>
+                    <button class="message-filter">Arquivadas</button>
+                </div>
+                
+                <!-- Busca -->
+                <div class="app-search">
+                    <input type="text" placeholder="Buscar mensagem...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                
+                <!-- Lista de Conversas -->
+                <div class="conversations-list">
+                    
+                    <!-- Conversa 1 -->
+                    <div class="conversation-card unread">
+                        <div class="conversation-avatar">
+                            <img src="../../assets/images/contatos/contato1.jpg" alt="">
+                            <span class="online-dot"></span>
+                        </div>
+                        <div class="conversation-info">
+                            <div class="conversation-header">
+                                <h3></h3>
+                                <span class="conversation-time"></span>
+                            </div>
+                            <p class="conversation-preview"></p>
+                        </div>
+                        <span class="unread-badge">2</span>
+                    </div>
+                    
+                    <!-- Conversa 2 -->
+                    <div class="conversation-card unread">
+                        <div class="conversation-avatar">
+                            <img src="../../assets/images/contatos/contato2.jpg" alt="">
+                        </div>
+                        <div class="conversation-info">
+                            <div class="conversation-header">
+                                <h3></h3>
+                                <span class="conversation-time"></span>
+                            </div>
+                            <p class="conversation-preview"></p>
+                        </div>
+                        <span class="unread-badge">1</span>
+                    </div>
+                    
+                    <!-- Conversa 3 -->
+                    <div class="conversation-card">
+                        <div class="conversation-avatar">
+                            <img src="../../assets/images/contatos/contato3.jpg" alt="">
+                        </div>
+                        <div class="conversation-info">
+                            <div class="conversation-header">
+                                <h3></h3>
+                                <span class="conversation-time"></span>
+                            </div>
+                            <p class="conversation-preview"></p>
+                        </div>
+                    </div>
+                    
+                    <!-- Conversa 4 -->
+                    <div class="conversation-card">
+                        <div class="conversation-avatar">
+                            <img src="../../assets/images/contatos/contato4.jpg" alt="">
+                        </div>
+                        <div class="conversation-info">
+                            <div class="conversation-header">
+                                <h3></h3>
+                                <span class="conversation-time"></span>
+                            </div>
+                            <p class="conversation-preview"></p>
+                        </div>
+                    </div>
+                    
+                    <!-- Conversa 5 -->
+                    <div class="conversation-card">
+                        <div class="conversation-avatar">
+                            <img src="../../assets/images/contatos/contato5.jpg" alt="">
+                        </div>
+                        <div class="conversation-info">
+                            <div class="conversation-header">
+                                <h3></h3>
+                                <span class="conversation-time"></span>
+                            </div>
+                            <p class="conversation-preview"></p>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </section>
+
+    <script src="../../assets/js/script.js"></script>
+</body>
+</html>
